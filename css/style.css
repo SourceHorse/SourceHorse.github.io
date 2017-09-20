@@ -2,11 +2,9 @@ body {
   margin: 0;
   background-color: white;
 }
-
 h2 {
   font-weight: normal;
 }
-
 .fixed {
   position: fixed;
 }
