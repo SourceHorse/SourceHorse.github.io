@@ -3,6 +3,10 @@ body {
   background-color: white;
 }
 
+h2 {
+  font-weight: normal;
+}
+
 .fixed {
   position: fixed;
 }
@@ -31,8 +35,12 @@ body {
 .top-navbar .social {
   display: block;
   float: right;
+  font-size: 12px;
+  border: solid 1px;
+  border-radius: 10px;
   margin: 5px 5px 5px 5px;
-  padding: 5px 5px;
+  padding: 3px 5px;
+  width: 22px;
 }
 .top-navbar .drop-button {
   display: none;
@@ -50,7 +58,7 @@ body {
   height: 100vh;
   min-height: 800px;
   width: 100%;
-  background-image: url(https://image.ibb.co/btNqrv/portfoliobg_BW.jpg);
+  background-image: url(https://image.ibb.co/eqXJ3k/portfoliobg_BLU2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: black;
@@ -107,11 +115,12 @@ body {
   height: 100vh;
   min-height: 1600px;
   width: 100%;
-  background-color: white;
 }
 #portfolio .section-box {
   max-width: 980px;
   margin: auto;
+  background-color: white;
+  padding: 0px 40px;
 }
 #portfolio img {
   width: 100%;
@@ -133,7 +142,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
-  grid-gap: 10px;
+  grid-column-gap: 10px;
   grid-row-gap: 50px;
 }
 .portf-grid > div {
@@ -143,7 +152,6 @@ body {
 .portf-grid .port-img-1 {
   grid-column: 1;
   grid-row: 1;
-  border: solid black 1px;
 }
 .portf-grid .port-img-1-details {
   grid-column: 2 / 4;
@@ -152,7 +160,6 @@ body {
 .portf-grid .port-img-2 {
   grid-column: 1;
   grid-row: 2;
-  border: solid black 1px;
 }
 .portf-grid .port-img-2-details {
   grid-column: 2 / 4;
@@ -161,7 +168,6 @@ body {
 .portf-grid .port-img-3 {
   grid-column: 1;
   grid-row: 3;
-  border: solid black 1px;
 }
 .portf-grid .port-img-3-details {
   grid-column: 2 / 4;
@@ -170,7 +176,6 @@ body {
 .portf-grid .port-img-4 {
   grid-column: 1;
   grid-row: 4;
-  border: solid black 1px;
 }
 .portf-grid .port-img-4-details {
   grid-column: 2 / 4;
@@ -179,7 +184,6 @@ body {
 .portf-grid .port-img-5 {
   grid-column: 1;
   grid-row: 5;
-  border: solid black 1px;
 }
 .portf-grid .port-img-5-details {
   grid-column: 2 / 4;
@@ -189,7 +193,7 @@ body {
 #contact {
   height: 100vh;
   min-height: 600px;
-  background-color: black;
+  background-color: #267373;
 }
 #contact .section-box {
   max-width: 980px;
@@ -204,6 +208,41 @@ body {
   font-family: 'roboto';
   font-size: 72px;
   color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 0px;
+  grid-row-gap: 0px;
+}
+.contact-grid .section-title {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.contact-grid .my-picture {
+  grid-column: 3;
+  grid-row: 1;
+}
+.contact-grid .my-picture img {
+  height: 300px;
+  border: solid 2px white;
+  border-radius: 50%;
+}
+.contact-grid .content {
+  grid-column: 1 / 4;
+  grid-row: 2;
+}
+.contact-grid .content h2 {
+  text-align: center;
+  font-family: 'roboto';
+  font-size: 30px;
+  color: white;
+}
+.contact-grid .content-buttons {
+  grid-column: 1 / 4;
+  grid-row: 3;
 }
 
 .message-field {
@@ -257,7 +296,7 @@ body {
   border-bottom: solid white;
 }
 .contact-buttons:hover i {
-  color: blue;
+  color: maroon;
 }
 .contact-buttons i {
   font-size: 40px;
@@ -286,12 +325,12 @@ body {
   color: white;
 }
 .go-btn-on-black:hover {
-  color: black;
+  color: #267373;
   border-color: white;
   background-color: white;
 }
 .go-btn-on-black:hover h2 {
-  color: black;
+  color: #267373;
 }
 
 .go-btn-on-white {
@@ -299,8 +338,8 @@ body {
 }
 .go-btn-on-white:hover {
   color: white;
-  border-color: black;
-  background-color: black;
+  border-color: #267373;
+  background-color: #267373;
 }
 .go-btn-on-white:hover h2 {
   color: white;
@@ -322,26 +361,26 @@ body {
 
 .nav-over-profile {
   color: white;
+  border-color: white;
 }
-.nav-over-profile.social:hover {
-  color: blue;
-}
-.nav-over-profile.nav-buttons:hover {
-  color: black;
+.nav-over-profile:hover {
+  color: #267373;
   background-color: white;
   border-color: white;
 }
 
 .nav-over-portfolio {
-  color: black;
+  color: #267373;
+  border-color: #267373;
 }
-.nav-over-portfolio.social:hover {
-  color: blue;
-}
-.nav-over-portfolio.nav-buttons:hover {
+.nav-over-portfolio:hover {
   color: white;
-  background-color: black;
-  border-color: black;
+  background-color: #267373;
+  border-color: #267373;
+}
+
+.secondary-color {
+  color: #267373 !important;
 }
 
 @media screen and (max-width: 1095px) {

@@ -27,7 +27,9 @@ body {
   margin: 0;
   background-color: white;
 }
-
+h2 {
+  font-weight: normal;
+}
 .fixed {
   position: fixed;
 }
@@ -55,8 +57,12 @@ body {
   .social {
     display: block;
     float: right;
+    font-size: 12px;
+    border: solid 1px;
+    border-radius: 10px;
     margin: 5px 5px 5px 5px;
-    padding: 5px 5px;
+    padding: 3px 5px;
+    width: 22px;
   }
   .drop-button {
     display: none;
@@ -74,7 +80,7 @@ body {
   min-height: 800px;
   width: 100%;
   background: {
-    image: url(https://image.ibb.co/btNqrv/portfoliobg_BW.jpg);
+    image: url(https://image.ibb.co/eqXJ3k/portfoliobg_BLU2.jpg);
     repeat: no-repeat;
     size: 100%;
     color: black;
@@ -130,10 +136,11 @@ body {
   height: 100vh;
   min-height: 1600px;
   width: 100%;
-  background-color: white;
   .section-box {
     max-width: 980px;
     margin: auto;
+    background-color: white;
+    padding: 0px 40px;
   }
   img {
     width: 100%;
@@ -154,17 +161,15 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
-  grid-gap: 10px;
+  grid-column-gap: 10px;
   grid-row-gap: 50px;
   &> div {
     height: 200px;
     overflow: hidden;
-    //border: 2px solid rgb(233,171,88);
   }
   .port-img-1 {
     grid-column: 1;
     grid-row: 1;
-    border: solid black 1px;
   }
   .port-img-1-details {
     grid-column: 2 / 4;
@@ -174,7 +179,6 @@ body {
   .port-img-2 {
     grid-column: 1;
     grid-row: 2;
-    border: solid black 1px;
   }
   .port-img-2-details {
     grid-column: 2 / 4;
@@ -184,7 +188,6 @@ body {
   .port-img-3 {
     grid-column: 1;
     grid-row: 3;
-    border: solid black 1px;
   }
   .port-img-3-details {
     grid-column: 2 / 4;
@@ -194,7 +197,6 @@ body {
   .port-img-4 {
     grid-column: 1;
     grid-row: 4;
-    border: solid black 1px;
   }
   .port-img-4-details {
     grid-column: 2 / 4;
@@ -204,7 +206,6 @@ body {
   .port-img-5 {
     grid-column: 1;
     grid-row: 5;
-    border: solid black 1px;
   }
   .port-img-5-details {
     grid-column: 2 / 4;
@@ -215,7 +216,7 @@ body {
 #contact {
   height: 100vh;
   min-height: 600px;
-  background-color: black;
+  background-color: #267373;
   .section-box {
     max-width: 980px;
     margin: auto;
@@ -225,6 +226,41 @@ body {
   }
   .section-title {
     @include roboto(72px, white);
+  }
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 0px;
+  grid-row-gap: 0px;
+  &> div {
+    //  border: 2px solid rgb(233,171,88);
+  }
+  .section-title {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .my-picture {
+    grid-column: 3;
+    grid-row: 1;
+    img {
+      height: 300px;
+      border: solid 2px white;
+      border-radius: 50%;
+    }
+  }
+  .content {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    h2 {
+      text-align: center;
+      @include roboto(30px, white)
+    }
+  }
+  .content-buttons {
+    grid-column: 1 / 4;
+    grid-row: 3;
   }
 }
 .message-field {
@@ -273,7 +309,7 @@ body {
   &:hover {
     border-bottom: solid white;
     i {
-      color: blue;
+      color: maroon;
     }
   }
   i {
@@ -298,11 +334,11 @@ body {
 .go-btn-on-black {
   color: white;
   &:hover {
-    color: black;
+    color: #267373;
     border-color: white;
     background-color: white;
     h2 {
-      color: black;
+      color: #267373;
     }
   }
 }
@@ -310,8 +346,8 @@ body {
   color: black;
   &:hover {
     color: white;
-    border-color: black;
-    background-color: black;
+    border-color: #267373;
+    background-color: #267373;
     h2 {
       color: white;
     }
@@ -331,33 +367,24 @@ body {
 }
 .nav-over-profile {
   color: white;
-  &.social {
-    &:hover {
-      color: blue;
-    }
-  }
-  &.nav-buttons {
-    &:hover {
-      color: black;
-      background-color: white;
-      border-color: white;
-    }
+  border-color: white;
+  &:hover {
+    color: #267373;
+    background-color: white;
+    border-color: white;
   }
 }
 .nav-over-portfolio {
-  color: black;
-  &.social {
-    &:hover {
-      color: blue;
-    }
+  color: #267373;
+  border-color: #267373;
+  &:hover {
+    color: white;
+    background-color: #267373;
+    border-color: #267373;
   }
-  &.nav-buttons {
-    &:hover {
-      color: white;
-      background-color: black;
-      border-color: black;
-    }
-  }
+}
+.secondary-color {
+  color: #267373 !important;
 }
 @media screen and (max-width: 1095px) {
   .top-navbar{
