@@ -1,0 +1,531 @@
+@mixin hover-effect($color:white) {
+  &:hover {
+    background-color: $color;
+  }
+}
+@mixin roboto($size, $color:inherit) {
+  font: {
+    family: 'roboto';
+    size: $size;
+  }
+  color: $color;
+}
+@mixin shadow {
+  box: {
+    shadow: 5px 5px 10px black;
+  }
+}
+@mixin border {
+
+  border: {
+    style: solid;
+    width: 1px;
+    radius: 30px;
+  }
+}
+body {
+  margin: 0;
+  background-color: white;
+}
+
+.fixed {
+  position: fixed;
+}
+#navbar {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+.top-navbar {
+  height: 60px;
+  width: 100%;
+  a {
+    text-decoration: none;
+    font-family: roboto
+  }
+  .nav-buttons {
+    display: block;
+    float: left;
+    margin: 7px 5px 0px 5px;
+    padding: 2px 16px;
+    border: {
+      style: solid;
+      width: 1px;
+      radius: 30px;
+    }
+  }
+  .social {
+    display: block;
+    float: right;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px;
+  }
+  .drop-button {
+    display: none;
+    float: left;
+    margin: 10px 10px 5px 10px;
+    padding: 0px 6px;
+    font-size: 40px;
+    color: white;
+    @include hover-effect;
+  }
+}
+
+#profile {
+  height:100vh;
+  min-height: 800px;
+  width: 100%;
+  background: {
+    image: url(https://image.ibb.co/btNqrv/portfoliobg_BW.jpg);
+    repeat: no-repeat;
+    size: 100%;
+    color: black;
+  }
+  .name {
+    @include roboto(60px, white);
+  }
+  .section-box {
+    max-width: 980px;
+    margin: auto;
+  }
+  img {
+    width: 100%;
+    border: {
+      style: solid;
+      color: white;
+      width: 10px;
+      radius: 50%;
+    }
+  }
+  p {
+    @include roboto(20px, white);
+  }
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+  grid-auto-rows: minmax(90px, auto);
+  &> div {
+    border: none;
+  }
+  .g1 {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+  .g2 {
+    grid-column: 1 / 3;
+    grid-row: 3;
+  }
+  .g3 {
+    grid-column: 3;
+    grid-row: 2 / 5;
+  }
+  .g4 {
+    grid-column: 1 / 4;
+    grid-row: 4;
+  }
+}
+
+#portfolio {
+  height: 100vh;
+  min-height: 1600px;
+  width: 100%;
+  background-color: white;
+  .section-box {
+    max-width: 980px;
+    margin: auto;
+  }
+  img {
+    width: 100%;
+  }
+  .section-title {
+    @include roboto(72px, black);
+  }
+  p {
+    @include roboto(20px, black);
+    margin: {
+      top: 0px;
+      bottom: 5px;
+    }
+  }
+}
+
+.portf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+  grid-row-gap: 50px;
+  &> div {
+    height: 200px;
+    overflow: hidden;
+    //border: 2px solid rgb(233,171,88);
+  }
+  .port-img-1 {
+    grid-column: 1;
+    grid-row: 1;
+    border: solid black 1px;
+  }
+  .port-img-1-details {
+    grid-column: 2 / 4;
+    grid-row: 1;
+  }
+
+  .port-img-2 {
+    grid-column: 1;
+    grid-row: 2;
+    border: solid black 1px;
+  }
+  .port-img-2-details {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  .port-img-3 {
+    grid-column: 1;
+    grid-row: 3;
+    border: solid black 1px;
+  }
+  .port-img-3-details {
+    grid-column: 2 / 4;
+    grid-row: 3;
+  }
+
+  .port-img-4 {
+    grid-column: 1;
+    grid-row: 4;
+    border: solid black 1px;
+  }
+  .port-img-4-details {
+    grid-column: 2 / 4;
+    grid-row: 4;
+  }
+
+  .port-img-5 {
+    grid-column: 1;
+    grid-row: 5;
+    border: solid black 1px;
+  }
+  .port-img-5-details {
+    grid-column: 2 / 4;
+    grid-row: 5;
+  }
+}
+
+#contact {
+  height: 100vh;
+  min-height: 600px;
+  background-color: black;
+  .section-box {
+    max-width: 980px;
+    margin: auto;
+  }
+  p {
+    @include roboto(20px, white);
+  }
+  .section-title {
+    @include roboto(72px, white);
+  }
+}
+.message-field {
+  width: 100%;
+  height: 100px;
+  overflow: scroll;
+}
+.up {
+  opacity: 100;
+}
+.down {
+  display: block;
+}
+
+.link-btn {
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 10px;
+  background-color: none;
+  border: {
+    style: solid;
+    color: black;
+    width: 1px;
+    radius: 30px;
+  }
+  @include roboto(22px, black);
+  i {
+    font-size: 22px;
+  }
+  &:hover {
+  }
+}
+.contact-buttons {
+  position: relative;
+  bottom: 0;
+  display: block;
+  float: left;
+  text-decoration: none;
+  &:not(:last-child) {
+    margin-right: 56px;
+  }
+  color: white;
+  @include roboto(36px, white);
+  &:hover {
+    border-bottom: solid white;
+    i {
+      color: blue;
+    }
+  }
+  i {
+    font-size: 40px;
+    margin-right: 8px;
+  }
+}
+.fcc-icon {
+  font-size: 30px !important;
+}
+.go-btn {
+  width: 200px;
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  h2 {
+    font-family: 'syncopate';
+  }
+  @include border;
+}
+.go-btn-on-black {
+  color: white;
+  &:hover {
+    color: black;
+    border-color: white;
+    background-color: white;
+    h2 {
+      color: black;
+    }
+  }
+}
+.go-btn-on-white {
+  color: black;
+  &:hover {
+    color: white;
+    border-color: black;
+    background-color: black;
+    h2 {
+      color: white;
+    }
+  }
+}
+.go-up {
+  top: 0;
+  h2 {
+    margin: 0px 0px 10px 0px;
+  }
+}
+.go-down {
+  bottom: 0;
+  h2 {
+    margin: 10px 0px 0px 0px;
+  }
+}
+.nav-over-profile {
+  color: white;
+  &.social {
+    &:hover {
+      color: blue;
+    }
+  }
+  &.nav-buttons {
+    &:hover {
+      color: black;
+      background-color: white;
+      border-color: white;
+    }
+  }
+}
+.nav-over-portfolio {
+  color: black;
+  &.social {
+    &:hover {
+      color: blue;
+    }
+  }
+  &.nav-buttons {
+    &:hover {
+      color: white;
+      background-color: black;
+      border-color: black;
+    }
+  }
+}
+@media screen and (max-width: 1095px) {
+  .top-navbar{
+    height: 40px;
+    background-color: black !important;
+    z-index: 1;
+    * {
+      color: white !important;
+    }
+    .nav-buttons {
+      display: none;
+    }
+    .social {
+      margin: 0;
+      padding: 0px 5px;
+    }
+    .drop-button {
+      display: block;
+      margin: 0;
+    }
+    &.drop-menu {
+      height: 200px;
+      .nav-buttons {
+        display: block;
+        float: none;
+        position: relative;
+        top: 48px;
+      }
+
+      .drop-button {
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+    }
+  }
+  .name {
+    @include roboto(30px);
+  }
+  #profile {
+    min-height: 0;
+    img {
+      border: solid white 3px;
+      height: 100px;
+      width: 100px;
+    }
+  }
+  .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(50px, auto);
+    &> div {
+      border: none;
+    }
+    .g1 {
+      grid-column: 1 / 3;
+      grid-row: 2;
+      p {
+        margin: 0;
+      }
+    }
+    .g2 {
+      grid-column: 1 / 4;
+      grid-row: 3;
+      p {
+        margin: 0px, 5px, 5px, 5px;
+        font-size: 16px !important;
+      }
+    }
+    .g3 {
+      grid-column: 3;
+      grid-row: 2;
+      height: 100px;
+    }
+    .g4 {
+      grid-column: 1 / 4;
+      grid-row: 4;
+    }
+  }
+  #portfolio {
+    min-height: 3000px;
+  }
+  .portf-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;
+    &> div {
+      height: auto;
+      overflow: hidden;
+      //border: 2px solid rgb(233,171,88);
+    }
+    .port-img-1 {
+      grid-column: 1;
+      grid-row: 1;
+      border: solid black 1px;
+    }
+    .port-img-1-details {
+      grid-column: 1;
+      grid-row: 2;
+      padding-bottom: 12px;
+    }
+
+    .port-img-2 {
+      grid-column: 1;
+      grid-row: 3;
+      border: solid black 1px;
+    }
+    .port-img-2-details {
+      grid-column: 1;
+      grid-row: 4;
+      padding-bottom: 12px;
+    }
+
+    .port-img-3 {
+      grid-column: 1;
+      grid-row: 5;
+      border: solid black 1px;
+    }
+    .port-img-3-details {
+      grid-column: 1;
+      grid-row: 6;
+      padding-bottom: 12px;
+    }
+
+    .port-img-4 {
+      grid-column: 1;
+      grid-row: 7;
+      border: solid black 1px;
+    }
+    .port-img-4-details {
+      grid-column: 1;
+      grid-row: 8;
+      padding-bottom: 12px;
+    }
+
+    .port-img-5 {
+      grid-column: 1;
+      grid-row: 9;
+      border: solid black 1px;
+    }
+    .port-img-5-details {
+      grid-column: 1;
+      grid-row: 10;
+      padding-bottom: 12px;
+    }
+  }
+  .link-btn {
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    //font-size: 16px !important;
+    padding: 10px;
+    background-color: none;
+    border: {
+      style: solid;
+      color: black;
+      width: 1px;
+      radius: 30px;
+    }
+    @include roboto(16px, black);
+    i {
+      font-size: 16px;
+    }
+    &:hover {
+
+    }
+  }
+}
