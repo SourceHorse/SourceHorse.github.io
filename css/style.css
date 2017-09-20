@@ -2,9 +2,11 @@ body {
   margin: 0;
   background-color: white;
 }
+
 h2 {
   font-weight: normal;
 }
+
 .fixed {
   position: fixed;
 }
@@ -111,7 +113,7 @@ h2 {
 
 #portfolio {
   height: 100vh;
-  min-height: 1600px;
+  min-height: 1700px;
   width: 100%;
 }
 #portfolio .section-box {
@@ -126,14 +128,24 @@ h2 {
 #portfolio .section-title {
   font-family: 'roboto';
   font-size: 72px;
-  color: black;
+  color: white;
+  background-color: #267373;
+  padding: 10px 10px 10px 10px;
+  margin: 20px 0px;
+  border-radius: 30px;
 }
-#portfolio p {
+#portfolio .section-title p {
   font-family: 'roboto';
   font-size: 20px;
-  color: black;
-  margin-top: 0px;
-  margin-bottom: 5px;
+  color: white;
+  max-width: 700px;
+  margin: 10px auto 10px auto;
+}
+#portfolio h3 {
+  margin: 0;
+  font-family: 'roboto';
+  font-size: 30px;
+  color: #267373;
 }
 
 .portf-grid {
@@ -201,6 +213,8 @@ h2 {
   font-family: 'roboto';
   font-size: 20px;
   color: white;
+  max-width: 400px;
+  margin: 30px auto auto auto;
 }
 #contact .section-title {
   font-family: 'roboto';
@@ -265,15 +279,20 @@ h2 {
   padding: 10px;
   background-color: none;
   border-style: solid;
-  border-color: black;
+  border-color: #267373;
   border-width: 1px;
   border-radius: 30px;
   font-family: 'roboto';
   font-size: 22px;
-  color: black;
+  color: #267373;
 }
 .link-btn i {
   font-size: 22px;
+}
+.link-btn:hover {
+  color: white;
+  background-color: #267373;
+  border-color: #267373;
 }
 
 .contact-buttons {
@@ -332,7 +351,7 @@ h2 {
 }
 
 .go-btn-on-white {
-  color: black;
+  color: #267373;
 }
 .go-btn-on-white:hover {
   color: white;
