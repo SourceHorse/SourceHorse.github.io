@@ -185,7 +185,7 @@ h2 {
     min-height: 1980px;
     margin: auto;
     background-color: white;
-    padding: 0px 90px;
+    padding: 100px 90px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   }
   p {
@@ -195,6 +195,7 @@ h2 {
     width: 100%;
   }
   .section-title {
+    display: none;
     @include roboto(72px, white);
     background-color: $primary-color;
     padding: 10px 10px 10px 10px;
@@ -320,9 +321,11 @@ h2 {
   display: block;
 }
 .link-btn {
+  width: 200px;
+  display: block;
+  float: left;
   margin-right: 10px;
   cursor: pointer;
-  text-decoration: none;
   font-size: 22px;
   padding: 10px;
   background-color: none;
@@ -332,7 +335,11 @@ h2 {
     width: 1px;
     radius: 30px;
   }
-  @include roboto(22px, $primary-color);
+  a {
+    text-decoration: none;
+    @include roboto(22px, $primary-color);
+  }
+
   i {
     font-size: 22px;
   }
@@ -550,9 +557,9 @@ h2 {
       max-width: 980px;
       height: 100vh;
       min-height: 600vh;
-      //margin: auto;
+      margin: auto;
       //background-color: white;
-      padding: 0px 0px;
+      padding: 240px 0px;
       //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     }
     p {
@@ -562,10 +569,11 @@ h2 {
       width: 100%;
     }
     .section-title {
+      display: none;
       @include roboto(72px, white);
       background-color: $primary-color;
       padding: 10px 10px 10px 10px;
-      margin: 360px 0px 30px 0px;
+      margin: 180px 0px 30px 0px;
       border-radius: 30px;
       p {
         @include roboto(20px, white);
@@ -582,7 +590,7 @@ h2 {
   .portf-grid {
     margin-bottom: 40px;
     width: 100%;
-    height: 100vh;
+    height: auto;
     //display: grid;
     //display: -ms-grid;
     grid-template-columns: repeat(1, 1fr);
@@ -595,29 +603,42 @@ h2 {
       overflow: hidden;
     }
     .port-img {
+      position: relative;
+      img {
+        position: absolute;
+        bottom: 0;
+      }
       grid-column: 1;
       -ms-grid-column: 1;
       grid-row: 1;
       -ms-grid-row: 1;
+      height: 40vh;
     }
     .port-img-details {
+      position: relative;
       grid-column: 1;
       -ms-grid-column: 1;
       grid-row: 2;
       -ms-grid-row: 2;
+      margin: auto 10%;
+      border-bottom: solid 1px black;
+      height: 60vh;
     }
     .divider {
+      display: none;
       grid-column: 1;
       grid-row: 3;
       height: 10px;
     }
   }
   .divider {
+    display: none;
     height: 10px;
     opacity: 0.2;
-    border-top: solid 1px black;
+    border-top: none;
+    border-bottom: solid 1px black;
     background: {
-      image: url('https://image.ibb.co/gB4J65/bottomshadow.png');
+      image: none;
       repeat: no-repeat;
     }
   }
@@ -642,7 +663,7 @@ h2 {
     }
   }
   .contact-grid {
-    margin-top: 360px;
+    margin-top: 180px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -688,24 +709,31 @@ h2 {
   .down {
     display: block;
   }
+
   .link-btn {
-    margin-right: 10px;
+    width: 600px;
+    display: block;
+    float: none;
+    margin: auto auto 30px auto;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 22px;
-    padding: 10px;
+    font-size: 60px;
+    padding: 20px;
     background-color: none;
     border: {
       style: solid;
       color: $primary-color;
       width: 1px;
-      radius: 30px;
+      radius: 60px;
     }
-    @include roboto(22px, $primary-color);
+    a {
+      text-decoration: none;
+      @include roboto(60px, $primary-color);
+    }
+
     i {
-      font-size: 22px;
+      font-size: 60px;
     }
-    &:hover {
+    & *:hover {
       color: white;
       background-color: $primary-color;
       border-color: $primary-color;
@@ -769,7 +797,7 @@ h2 {
   }
   .go-up {
     position: absolute;
-    top: 200px;
+    top: 80px;
     right: 50%;
     margin-right: -250px;
     h2 {
