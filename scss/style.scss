@@ -497,7 +497,7 @@ h2 {
       }
     }
     p {
-      @include roboto(30px, white);
+      @include roboto(40px, white);
 
       text-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
 
@@ -506,13 +506,13 @@ h2 {
       text-align: center;
     }
     .line1 {
-      @include lobster(90px, white);
+      @include lobster(114px, white);
     }
     .line2 {
-      @include josefin(80px, $primary-color);
+      @include josefin(100px, $primary-color);
     }
     .line3 {
-      @include syncopate(30px, white);
+      @include syncopate(42px, white);
       letter-spacing: 14px;
       margin-left: 14px;
     }
@@ -536,7 +536,7 @@ h2 {
     .g2 {
       grid-column: 1;
       grid-row: 2;
-      max-width: 500px;
+      max-width: 620px;
       margin: auto;
       text-align: justify;
     }
