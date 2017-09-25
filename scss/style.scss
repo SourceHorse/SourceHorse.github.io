@@ -579,7 +579,7 @@ h2 {
       margin: 180px 0px 30px 0px;
       border-radius: 30px;
       p {
-        @include roboto(20px, white);
+        @include roboto(32px, white);
         max-width: 700px;
         margin: 10px auto 10px auto;
       }
