@@ -738,10 +738,11 @@ h2 {
     font-size: 30px !important;
   }
   .go-btn {
-    width: 200px;
+    width: 600px;
     margin: auto;
     cursor: pointer;
     text-align: center;
+    font-size: 60px;
     h2 {
       font-family: 'syncopate';
     }
@@ -771,7 +772,7 @@ h2 {
   }
   .go-up {
     position: absolute;
-    top: 30px;
+    top: 300px;
     right: 50%;
     margin-right: -100px;
     h2 {
@@ -780,7 +781,7 @@ h2 {
   }
   .go-down {
     position: absolute;
-    bottom: 30px;
+    bottom: 300px;
     right: 50%;
     margin-right: -100px;
     h2 {
