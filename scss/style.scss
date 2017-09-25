@@ -1,4 +1,5 @@
 // compileCompressed, compressedFilenamePattern: ../css/style.css
+//THIS PAGE IS CURRENTLY UNDER CONSTRUCTION - code is subject to change daily and will be optimized before completion
 $primary-color: #3296a2;
 @mixin hover-effect($color:white) {
   &:hover {
@@ -181,8 +182,8 @@ h2 {
   width: 100%;
   .section-box {
     max-width: 980px;
-    height: 100vh;
-    min-height: 1980px;
+    height: auto;
+    min-height: auto;
     margin: auto;
     background-color: white;
     padding: 100px 90px;
@@ -214,6 +215,7 @@ h2 {
 }
 
 .portf-grid {
+  height: auto;
   margin-bottom: 40px;
   display: grid;
   display: -ms-grid;
@@ -223,7 +225,6 @@ h2 {
   grid-column-gap: 20px;
   grid-row-gap: 30px;
   &> div {
-    height: 220px;
     overflow: hidden;
   }
   .port-img {
@@ -344,7 +345,9 @@ h2 {
     font-size: 22px;
   }
   &:hover {
-    color: white;
+    a {
+      color: white;
+    }
     background-color: $primary-color;
     border-color: $primary-color;
   }
@@ -712,13 +715,10 @@ h2 {
 
   .link-btn {
     width: 600px;
-    display: block;
     float: none;
     margin: auto auto 30px auto;
-    cursor: pointer;
     font-size: 60px;
     padding: 20px;
-    background-color: none;
     border: {
       style: solid;
       color: $primary-color;
@@ -732,11 +732,6 @@ h2 {
 
     i {
       font-size: 60px;
-    }
-    & *:hover {
-      color: white;
-      background-color: $primary-color;
-      border-color: $primary-color;
     }
   }
   .contact-buttons {
