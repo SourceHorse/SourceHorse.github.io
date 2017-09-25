@@ -436,6 +436,7 @@ h2 {
 
 @media screen and (max-width: 1095px) {
   .top-navbar {
+    display: none;
     height: 40px;
     background-color: black !important;
     z-index: 1;
@@ -474,133 +475,335 @@ h2 {
     @include roboto(30px);
   }
   #profile {
-    min-height: 0;
+    position: relative;
+    height:100vh;
+    //  min-height: 100vh;
+    width: 100%;
+    background: {
+      image: url(https://image.ibb.co/eqXJ3k/portfoliobg_BLU2.jpg);
+      repeat: no-repeat;
+      opacity: 50%;
+      width: 100%;
+      color: black;
+    }
+    .section-box {
+      max-width: 980px;
+      margin: auto;
+    }
     img {
-      border: solid white 3px;
-      height: 100px;
-      width: 100px;
+      width: 100%;
+      border: {
+        style: solid;
+        color: white;
+        width: 10px;
+        radius: 50%;
+      }
+    }
+    p {
+      @include roboto(20px, white);
+
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
+
+    }
+    h1 {
+      text-align: center;
+    }
+    .line1 {
+      @include lobster(90px, white);
+    }
+    .line2 {
+      @include josefin(80px, $primary-color);
+    }
+    .line3 {
+      @include syncopate(30px, white);
+      letter-spacing: 14px;
+      margin-left: 14px;
     }
   }
+
   .profile-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 0px;
-    grid-auto-rows: minmax(50px, auto);
+    grid-auto-rows: minmax(90px, auto);
     &> div {
       border: none;
     }
     .g1 {
-      grid-column: 1 / 3;
-      grid-row: 2;
-      p {
-        margin: 0;
+      padding: {
+        top: 10%;
       }
+      grid-column: 1;
+      grid-row: 1;
     }
     .g2 {
-      grid-column: 1 / 4;
-      grid-row: 3;
+      grid-column: 1;
+      grid-row: 2;
+      max-width: 500px;
+      margin: auto;
+      text-align: justify;
+    }
+  }
+
+
+  #portfolio {
+    //position: relative;
+    //width: 100%;
+    .section-box {
+      max-width: 980px;
+      height: 100vh;
+      min-height: 600vh;
+      //margin: auto;
+      //background-color: white;
+      padding: 0px 0px;
+      //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    }
+    p {
+      @include roboto(18px, black);
+    }
+    img {
+      width: 100%;
+    }
+    .section-title {
+      @include roboto(72px, white);
+      background-color: $primary-color;
+      padding: 10px 10px 10px 10px;
+      margin: 80px 0px 30px 0px;
+      border-radius: 30px;
       p {
-        margin: 0px, 5px, 5px, 5px;
-        font-size: 16px !important;
+        @include roboto(20px, white);
+        max-width: 700px;
+        margin: 10px auto 10px auto;
       }
     }
-    .g3 {
-      grid-column: 3;
-      grid-row: 2;
-      height: 100px;
-    }
-    .g4 {
-      grid-column: 1 / 4;
-      grid-row: 4;
+    h3 {
+      margin: 0;
+      @include roboto(30px, $primary-color)
     }
   }
-  #portfolio {
-    min-height: 3000px;
-  }
+
   .portf-grid {
-    display: grid;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 100vh;
+    //display: grid;
+    //display: -ms-grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 20px;
+    -ms-grid-columns: 1;
+    //grid-auto-rows: minmax(0px, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
     &> div {
       height: auto;
       overflow: hidden;
-      //border: 2px solid rgb(233,171,88);
     }
-    .port-img-1 {
+    .port-img {
       grid-column: 1;
+      -ms-grid-column: 1;
       grid-row: 1;
-      border: solid black 1px;
+      -ms-grid-row: 1;
     }
-    .port-img-1-details {
+    .port-img-details {
       grid-column: 1;
+      -ms-grid-column: 1;
       grid-row: 2;
-      padding-bottom: 12px;
+      -ms-grid-row: 2;
     }
-
-    .port-img-2 {
+    .divider {
       grid-column: 1;
       grid-row: 3;
-      border: solid black 1px;
+      height: 10px;
     }
-    .port-img-2-details {
-      grid-column: 1;
-      grid-row: 4;
-      padding-bottom: 12px;
+  }
+  .divider {
+    height: 10px;
+    opacity: 0.2;
+    border-top: solid 1px black;
+    background: {
+      image: url('https://image.ibb.co/gB4J65/bottomshadow.png');
+      repeat: no-repeat;
     }
+  }
 
-    .port-img-3 {
-      grid-column: 1;
-      grid-row: 5;
-      border: solid black 1px;
-    }
-    .port-img-3-details {
-      grid-column: 1;
-      grid-row: 6;
-      padding-bottom: 12px;
-    }
 
-    .port-img-4 {
-      grid-column: 1;
-      grid-row: 7;
-      border: solid black 1px;
+  #contact {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background-color: $primary-color;
+    .section-box {
+      max-width: 980px;
+      margin: auto;
     }
-    .port-img-4-details {
-      grid-column: 1;
-      grid-row: 8;
-      padding-bottom: 12px;
+    p {
+      @include roboto(20px, white);
+      max-width: 400px;
+      margin: 30px auto auto auto;
     }
-
-    .port-img-5 {
-      grid-column: 1;
-      grid-row: 9;
-      border: solid black 1px;
+    .section-title {
+      @include roboto(72px, white);
     }
-    .port-img-5-details {
-      grid-column: 1;
-      grid-row: 10;
-      padding-bottom: 12px;
+  }
+  .contact-grid {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 0px;
+    grid-row-gap: 0px;
+    &> div {
+      //  border: 2px solid rgb(233,171,88);
     }
+    .section-title {
+      padding-top: 10%;
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+    .my-picture {
+      grid-column: 3;
+      grid-row: 1;
+      img {
+        height: 300px;
+        border: solid 2px white;
+        border-radius: 50%;
+      }
+    }
+    .content {
+      padding-top: 10%;
+      grid-column: 1 / 4;
+      grid-row: 2;
+      h2 {
+        text-align: center;
+        @include roboto(30px, white)
+      }
+    }
+    .content-buttons {
+      position: relative;
+      bottom: 40px;
+      padding-top: 10%;
+      grid-column: 1 / 4;
+      grid-row: 3;
+    }
+  }
+  .up {
+    opacity: 100;
+  }
+  .down {
+    display: block;
   }
   .link-btn {
     margin-right: 10px;
     cursor: pointer;
     text-decoration: none;
-    //font-size: 16px !important;
+    font-size: 22px;
     padding: 10px;
     background-color: none;
     border: {
       style: solid;
-      color: black;
+      color: $primary-color;
       width: 1px;
       radius: 30px;
     }
-    @include roboto(16px, black);
+    @include roboto(22px, $primary-color);
     i {
-      font-size: 16px;
+      font-size: 22px;
     }
     &:hover {
-
+      color: white;
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+  .contact-buttons {
+    position: relative;
+    bottom: 0;
+    display: block;
+    float: left;
+    text-decoration: none;
+    &:not(:last-child) {
+      margin-right: 56px;
+    }
+    color: white;
+    @include roboto(36px, white);
+    &:hover {
+      transition: 0.3s;
+      border-bottom: solid 5px white;
+    }
+    i {
+      font-size: 40px;
+      margin-right: 8px;
+    }
+  }
+  .fcc-icon {
+    font-size: 30px !important;
+  }
+  .go-btn {
+    width: 200px;
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+    h2 {
+      font-family: 'syncopate';
+    }
+    @include border;
+  }
+  .go-btn-on-black {
+    color: white;
+    &:hover {
+      color: $primary-color;
+      border-color: white;
+      background-color: white;
+      h2 {
+        color: $primary-color;
+      }
+    }
+  }
+  .go-btn-on-white {
+    color: $primary-color;
+    &:hover {
+      color: white;
+      border-color: $primary-color;
+      background-color: $primary-color;
+      h2 {
+        color: white;
+      }
+    }
+  }
+  .go-up {
+    position: absolute;
+    top: 30px;
+    right: 50%;
+    margin-right: -100px;
+    h2 {
+      margin: 0px 0px 10px 0px;
+    }
+  }
+  .go-down {
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    margin-right: -100px;
+    h2 {
+      margin: 10px 0px 0px 0px;
+    }
+  }
+  .nav-over-profile {
+    color: white;
+    border-color: white;
+    &:hover {
+      color: $primary-color;
+      background-color: white;
+      border-color: white;
+    }
+  }
+  .nav-over-portfolio {
+    color: $primary-color;
+    background-color: white;
+    border-color: $primary-color;
+    &:hover {
+      color: white;
+      background-color: $primary-color;
+      border-color: $primary-color;
     }
   }
 }
