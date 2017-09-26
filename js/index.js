@@ -8,12 +8,20 @@ $('a').click(function() {
   }
 });
 
+$('.go-btn').click(function() {
+  var tgt = $(this).data("scroll-target");
+  $('html,body').animate({
+    scrollTop: $(tgt).offset().top
+  }, 1000);
+})
+/*
 function scrollTo(tgt) {
+  console.log('click');
   $('html,body').animate({
     scrollTop: $(tgt).offset().top
   }, 1000);
 };
-
+*/
 $(window).scroll(function() {
 	if (($(window).scrollTop() < $('#portfolio').position().top - 10) || ($(window).scrollTop() >= $('#contact').position().top -10)) {
    // $('#navbar').children().css('color', 'white');
