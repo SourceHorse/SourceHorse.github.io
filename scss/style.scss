@@ -46,6 +46,29 @@ $primary-color: #3296a2;
     radius: $radius;
   }
 }
+@mixin button($text-color: white, $radius: 30px, $padding: 0px 10px) {
+  color: $text-color;
+  cursor: pointer;
+  text-decoration: none;
+  border: solid 2px;
+  border-radius: $radius;
+  padding: $padding;
+  @if $text-color == $primary-color {
+    border-color: $primary-color;
+    &:hover {
+      color: white;
+      border-color: $primary-color;
+      background-color: $primary-color;
+    }
+  } @else {
+    border-color: white;
+    &:hover {
+      color: $primary-color;
+      border-color: white;
+      background-color: white;
+    }
+  }
+}
 body {
   margin: 0;
   background-color: white;
@@ -69,28 +92,17 @@ h2 {
   width: 100%;
   a {
     text-decoration: none;
-    font-family: roboto
   }
   .nav-buttons {
     display: block;
     float: left;
-    margin: 7px 5px 0px 5px;
-    padding: 2px 16px;
-    border: {
-      style: solid;
-      width: 2px;
-      radius: 30px;
-    }
   }
   .social {
     display: block;
     float: right;
     font-size: 12px;
-    border: solid 2px;
-    border-radius: 10px;
-    margin: 5px 5px 5px 5px;
-    padding: 3px 5px;
     width: 22px;
+    margin: 5px;
   }
   .drop-button {
     display: none;
@@ -110,7 +122,7 @@ h2 {
   //min-height: 100vh;
   width: 100%;
   background: {
-    image: url(../resources/images/BGCL1080c.jpg);
+    image: url(https://image.ibb.co/b6uGDk/BGCL.png);
     repeat: no-repeat;
     opacity: 50%;
     width: 100%;
@@ -379,25 +391,16 @@ h2 {
   font-size: 30px !important;
 }
 .go-btn {
-  width: 200px;
+  width: auto;
   margin: auto;
-  cursor: pointer;
   text-align: center;
   h2 {
     font-family: 'syncopate';
   }
-  @include border;
 }
+
 .go-btn-on-black {
-  color: white;
-  &:hover {
-    color: $primary-color;
-    border-color: white;
-    background-color: white;
-    h2 {
-      color: $primary-color;
-    }
-  }
+  @include button(white);
 }
 .go-btn-on-white {
   color: $primary-color;
@@ -411,6 +414,7 @@ h2 {
   }
 }
 .go-up {
+  width: 200px;
   position: absolute;
   top: 30px;
   right: 50%;
@@ -420,6 +424,7 @@ h2 {
   }
 }
 .go-down {
+  width: 200px;
   position: absolute;
   bottom: 30px;
   right: 50%;
@@ -429,25 +434,21 @@ h2 {
   }
 }
 .nav-over-profile {
-  color: white;
-  border-color: white;
-  &:hover {
-    color: $primary-color;
-    background-color: white;
-    border-color: white;
+  @include button(white);
+  &.social {
+    @include button(white, 10px, 3px 5px);
   }
 }
 .nav-over-portfolio {
-  color: $primary-color;
-  background-color: white;
-  border-color: $primary-color;
-  &:hover {
-    color: white;
-    background-color: $primary-color;
-    border-color: $primary-color;
+  @include button($primary-color);
+  &.social {
+    @include button($primary-color, 10px, 3px 5px);
   }
 }
-
+.resume-button {
+  @include roboto(20px, white);
+  @include button(white, 30px);
+}
 @media screen and (max-width: 1095px) {
   .top-navbar {
     display: none;
