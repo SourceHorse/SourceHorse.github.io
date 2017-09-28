@@ -232,36 +232,17 @@ h2 {
   display: block;
 }
 .link-btn {
-  width: 200px;
+  @include button($primary-color, 30px, 10px);
+  @include roboto(20px);
+  margin-right: 10px;
+  i {
+    font-size: 20px;
+  }
+}
+.port-buttons-row {
   display: block;
   float: left;
-  margin-right: 10px;
-  cursor: pointer;
-  font-size: 22px;
-  padding: 10px;
-  background-color: none;
-  border: {
-    style: solid;
-    color: $primary-color;
-    width: 2px;
-    radius: 30px;
-  }
-  a {
-    text-decoration: none;
-    @include roboto(22px);
-    color: $primary-color;
-  }
-
-  i {
-    font-size: 22px;
-  }
-  &:hover {
-    a {
-      color: white;
-    }
-    background-color: $primary-color;
-    border-color: $primary-color;
-  }
+  margin-bottom: 30px;
 }
 .contact-buttons {
   position: relative;
@@ -423,21 +404,6 @@ h2 {
     img {
       width: 100%;
     }
-    .section-title {
-      display: none;
-      @include roboto(72px);
-      color: white;
-      background-color: $primary-color;
-      padding: 10px 10px 10px 10px;
-      margin: 180px 0px 30px 0px;
-      border-radius: 30px;
-      p {
-        @include roboto(32px);
-        color: white;
-        max-width: 700px;
-        margin: 10px auto 10px auto;
-      }
-    }
     h3 {
       margin: 0;
       @include roboto(50px);
@@ -574,23 +540,17 @@ h2 {
   }
 
   .link-btn {
-    width: 600px;
-    float: none;
-    margin: auto auto 20px auto;
-    font-size: 60px;
-    padding: 20px;
-    border: {
-      radius: 60px;
-      width: 5px;
-    }
-    a {
-      text-decoration: none;
-      @include roboto(60px);
-      color: $primary-color;
-    }
+    @include button($primary-color, 30px, 10px);
+    @include roboto(20px);
+    margin-right: 10px;
     i {
-      font-size: 60px;
+      font-size: 20px;
     }
+  }
+  .port-buttons-row {
+    display: inline;
+    float: none;
+    margin: auto auto auto 30px;
   }
   .contact-buttons {
     position: relative;
