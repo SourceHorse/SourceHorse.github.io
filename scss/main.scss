@@ -110,21 +110,6 @@ h2 {
   img {
     width: 100%;
   }
-  .section-title {
-    display: none;
-    @include roboto(72px);
-    color: white;
-    background-color: $primary-color;
-    padding: 10px 10px 10px 10px;
-    margin: 80px 0px 30px 0px;
-    border-radius: 30px;
-    p {
-      @include roboto(20px);
-      color: white;
-      max-width: 700px;
-      margin: 10px auto 10px auto;
-    }
-  }
   h3 {
     margin: 0;
     @include roboto(30px);
@@ -425,11 +410,10 @@ h2 {
     //width: 100%;
     .section-box {
       max-width: 980px;
-      height: 100vh;
-      min-height: 600vh;
+      //min-height: 600vh;
       margin: auto;
       //background-color: white;
-      padding: 240px 0px;
+      padding: 140px 0px 300px 0px;
       //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     }
     p {
