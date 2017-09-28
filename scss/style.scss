@@ -51,6 +51,7 @@ $primary-color: #3296a2;
   padding: $padding;
   @if $text-color == $primary-color {
     border-color: $primary-color;
+    background-color: white;
     &:hover {
       color: white;
       border-color: $primary-color;
@@ -457,7 +458,7 @@ h2 {
     @include button(white, 30px);
   }
 }
-@media screen and (max-width: 1095px) {
+@media (device-width: 500px), (max-device-width: 667px) {
   .top-navbar {
     display: none;
     height: 40px;
@@ -494,9 +495,7 @@ h2 {
       }
     }
   }
-  .name {
-    @include roboto(30px);
-  }
+
   #profile {
     position: relative;
     height:100vh;
