@@ -1,71 +1,7 @@
 // compileCompressed, compressedFilenamePattern: ../css/style.css
 //THIS PAGE IS CURRENTLY UNDER CONSTRUCTION - code is subject to change daily and will be optimized before completion
-$primary-color: #3296a2;
-@mixin hover-effect($color:white) {
-  &:hover {
-    background-color: $color;
-  }
-}
-@mixin lobster($size: 18px) {
-  font: {
-    family: 'Lobster', sans-serif;
-    size: $size;
-  }
-}
-@mixin josefin($size: 18px) {
-  font: {
-    family: 'Josefin Sans', sans-serif;
-    size: $size;
-  }
-}
-@mixin syncopate($size: 18px) {
-  font: {
-    family: 'syncopate', sans-serif;
-    size: $size;
-  }
-}
-@mixin roboto($size: 18px) {
-  font: {
-    family: 'roboto';
-    size: $size;
-  }
-}
-@mixin shadow {
-  box: {
-    shadow: 5px 5px 10px black;
-  }
-}
-@mixin border($radius: 30px) {
-  border: {
-    style: solid;
-    width: 2px;
-    radius: $radius;
-  }
-}
-@mixin button($text-color: white, $radius: 30px, $padding: 0px 10px) {
-  color: $text-color;
-  cursor: pointer;
-  text-decoration: none;
-  border: solid 2px;
-  border-radius: $radius;
-  padding: $padding;
-  @if $text-color == $primary-color {
-    border-color: $primary-color;
-    background-color: white;
-    &:hover {
-      color: white;
-      border-color: $primary-color;
-      background-color: $primary-color;
-    }
-  } @else {
-    border-color: white;
-    &:hover {
-      color: $primary-color;
-      border-color: white;
-      background-color: white;
-    }
-  }
-}
+@import 'mixins';
+@import 'navbar';
 body {
   margin: 0;
   background-color: white;
@@ -77,55 +13,7 @@ h1 {
 h2 {
   font-weight: normal;
 }
-.fixed {
-  position: fixed;
-}
-#navbar {
-  background-color: rgba(0, 0, 0, 0.0);
-  z-index: 1;
-}
-.top-navbar {
-  height: 60px;
-  width: 100%;
-  a {
-    text-decoration: none;
-  }
-  .nav-buttons {
-    display: block;
-    float: left;
-    margin: 5px;
-  }
-  .social {
-    display: block;
-    float: right;
-    font-size: 12px;
-    width: 22px;
-    margin: 5px;
-  }
-  .drop-button {
-    display: none;
-    float: left;
-    margin: 10px 10px 5px 10px;
-    padding: 0px 6px;
-    font-size: 40px;
-    color: white;
-    @include hover-effect;
-  }
-}
-.nav-over-profile {
-  @include roboto(18px);
-  @include button(white);
-  &.social {
-    @include button(white, 10px, 3px 5px);
-  }
-}
-.nav-over-portfolio {
-  @include roboto(18px);
-  @include button($primary-color);
-  &.social {
-    @include button($primary-color, 10px, 3px 5px);
-  }
-}
+
 
 #profile {
   position: relative;
@@ -459,42 +347,6 @@ h2 {
   }
 }
 @media (device-width: 500px), (max-device-width: 667px) {
-  .top-navbar {
-    display: none;
-    height: 40px;
-    background-color: black !important;
-    z-index: 1;
-    * {
-      color: white !important;
-    }
-    .nav-buttons {
-      display: none;
-    }
-    .social {
-      margin: 0;
-      padding: 0px 5px;
-    }
-    .drop-button {
-      display: block;
-      margin: 0;
-    }
-    &.drop-menu {
-      height: 200px;
-      .nav-buttons {
-        display: block;
-        float: none;
-        position: relative;
-        top: 48px;
-      }
-
-      .drop-button {
-        display: block;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-      }
-    }
-  }
 
   #profile {
     position: relative;

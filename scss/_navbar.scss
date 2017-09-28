@@ -1,0 +1,89 @@
+// !compileOnSave
+// compileOnSave: false
+.fixed {
+  position: fixed;
+}
+#navbar {
+  background-color: rgba(0, 0, 0, 0.0);
+  z-index: 1;
+}
+.top-navbar {
+  height: 60px;
+  width: 100%;
+  a {
+    text-decoration: none;
+  }
+  .nav-buttons {
+    display: block;
+    float: left;
+    margin: 5px;
+  }
+  .social {
+    display: block;
+    float: right;
+    font-size: 12px;
+    width: 22px;
+    margin: 5px;
+  }
+  .drop-button {
+    display: none;
+    float: left;
+    margin: 10px 10px 5px 10px;
+    padding: 0px 6px;
+    font-size: 40px;
+    color: white;
+    @include hover-effect;
+  }
+}
+.nav-over-profile {
+  @include roboto(18px);
+  @include button(white);
+  &.social {
+    @include button(white, 10px, 3px 5px);
+  }
+}
+.nav-over-portfolio {
+  @include roboto(18px);
+  @include button($primary-color);
+  &.social {
+    @include button($primary-color, 10px, 3px 5px);
+  }
+}
+@media (device-width: 500px), (max-device-width: 667px) {
+  .top-navbar {
+    display: none;
+    height: 40px;
+    background-color: black !important;
+    z-index: 1;
+    * {
+      color: white !important;
+    }
+    .nav-buttons {
+      display: none;
+    }
+    .social {
+      margin: 0;
+      padding: 0px 5px;
+    }
+    .drop-button {
+      display: block;
+      margin: 0;
+    }
+    &.drop-menu {
+      height: 200px;
+      .nav-buttons {
+        display: block;
+        float: none;
+        position: relative;
+        top: 48px;
+      }
+
+      .drop-button {
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+    }
+  }
+}
