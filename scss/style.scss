@@ -6,33 +6,29 @@ $primary-color: #3296a2;
     background-color: $color;
   }
 }
-@mixin lobster($size, $color:inherit) {
+@mixin lobster($size: 18px) {
   font: {
     family: 'Lobster', sans-serif;
     size: $size;
   }
-  color: $color;
 }
-@mixin josefin($size, $color:inherit) {
+@mixin josefin($size: 18px) {
   font: {
     family: 'Josefin Sans', sans-serif;
     size: $size;
   }
-  color: $color;
 }
-@mixin syncopate($size, $color:inherit) {
+@mixin syncopate($size: 18px) {
   font: {
     family: 'syncopate', sans-serif;
     size: $size;
   }
-  color: $color;
 }
-@mixin roboto($size, $color:inherit) {
+@mixin roboto($size: 18px) {
   font: {
     family: 'roboto';
     size: $size;
   }
-  color: $color;
 }
 @mixin shadow {
   box: {
@@ -96,6 +92,7 @@ h2 {
   .nav-buttons {
     display: block;
     float: left;
+    margin: 5px;
   }
   .social {
     display: block;
@@ -114,12 +111,25 @@ h2 {
     @include hover-effect;
   }
 }
+.nav-over-profile {
+  @include roboto(18px);
+  @include button(white);
+  &.social {
+    @include button(white, 10px, 3px 5px);
+  }
+}
+.nav-over-portfolio {
+  @include roboto(18px);
+  @include button($primary-color);
+  &.social {
+    @include button($primary-color, 10px, 3px 5px);
+  }
+}
 
 #profile {
-
   position: relative;
   height:100vh;
-  //min-height: 100vh;
+  min-height: 700px;
   width: 100%;
   background: {
     image: url(https://image.ibb.co/b6uGDk/BGCL.png);
@@ -143,8 +153,8 @@ h2 {
     }
   }
   p {
-    @include roboto(20px, white);
-
+    @include roboto(20px);
+    color: white;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
 
   }
@@ -152,13 +162,16 @@ h2 {
     text-align: center;
   }
   .line1 {
-    @include lobster(90px, white);
+    @include lobster(90px);
+    color: white;
   }
   .line2 {
-    @include josefin(80px, $primary-color);
+    @include josefin(80px);
+    color: $primary-color;
   }
   .line3 {
-    @include syncopate(30px, white);
+    @include syncopate(30px);
+    color: white;
     letter-spacing: 14px;
     margin-left: 14px;
   }
@@ -202,30 +215,35 @@ h2 {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   }
   p {
-    @include roboto(18px, black);
+    @include roboto(18px);
+    color: black;
   }
   img {
     width: 100%;
   }
   .section-title {
     display: none;
-    @include roboto(72px, white);
+    @include roboto(72px);
+    color: white;
     background-color: $primary-color;
     padding: 10px 10px 10px 10px;
     margin: 80px 0px 30px 0px;
     border-radius: 30px;
     p {
-      @include roboto(20px, white);
+      @include roboto(20px);
+      color: white;
       max-width: 700px;
       margin: 10px auto 10px auto;
     }
   }
   h3 {
     margin: 0;
-    @include roboto(30px, $primary-color)
+    @include roboto(30px);
+    color: $primary-color;
   }
   h4 {
-    @include roboto(20px, black)
+    @include roboto(20px);
+    color: black;
   }
 }
 
@@ -281,12 +299,14 @@ h2 {
     margin: auto;
   }
   p {
-    @include roboto(20px, white);
+    @include roboto(20px);
+    color: white;
     max-width: 400px;
     margin: 30px auto auto auto;
   }
   .section-title {
-    @include roboto(72px, white);
+    @include roboto(72px);
+    color: white;
   }
 }
 .contact-grid {
@@ -319,7 +339,8 @@ h2 {
     grid-row: 2;
     h2 {
       text-align: center;
-      @include roboto(30px, white)
+      @include roboto(30px);
+      color: white;
     }
   }
   .content-buttons {
@@ -353,7 +374,8 @@ h2 {
   }
   a {
     text-decoration: none;
-    @include roboto(22px, $primary-color);
+    @include roboto(22px);
+    color: $primary-color;
   }
 
   i {
@@ -376,8 +398,8 @@ h2 {
   &:not(:last-child) {
     margin-right: 56px;
   }
+  @include roboto(36px);
   color: white;
-  @include roboto(36px, white);
   &:hover {
     transition: 0.3s;
     border-bottom: solid 5px white;
@@ -391,6 +413,7 @@ h2 {
   font-size: 30px !important;
 }
 .go-btn {
+  z-index: 2;
   width: auto;
   margin: auto;
   text-align: center;
@@ -400,18 +423,10 @@ h2 {
 }
 
 .go-btn-on-black {
-  @include button(white);
+  @include button(white, 30px, 0px);
 }
 .go-btn-on-white {
-  color: $primary-color;
-  &:hover {
-    color: white;
-    border-color: $primary-color;
-    background-color: $primary-color;
-    h2 {
-      color: white;
-    }
-  }
+  @include button($primary-color, 30px, 0px);
 }
 .go-up {
   width: 200px;
@@ -433,21 +448,14 @@ h2 {
     margin: 10px 0px 0px 0px;
   }
 }
-.nav-over-profile {
-  @include button(white);
-  &.social {
-    @include button(white, 10px, 3px 5px);
+
+.resume-buttons {
+  text-align: center;
+  a {
+    @include roboto(20px);
+    color: white;
+    @include button(white, 30px);
   }
-}
-.nav-over-portfolio {
-  @include button($primary-color);
-  &.social {
-    @include button($primary-color, 10px, 3px 5px);
-  }
-}
-.resume-button {
-  @include roboto(20px, white);
-  @include button(white, 30px);
 }
 @media screen and (max-width: 1095px) {
   .top-navbar {
@@ -511,7 +519,8 @@ h2 {
       }
     }
     p {
-      @include roboto(40px, white);
+      @include roboto(40px);
+      color: white;
 
       text-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
 
@@ -520,13 +529,16 @@ h2 {
       text-align: center;
     }
     .line1 {
-      @include lobster(114px, white);
+      @include lobster(114px);
+      color: white;
     }
     .line2 {
-      @include josefin(100px, $primary-color);
+      @include josefin(100px);
+      color: $primary-color;
     }
     .line3 {
-      @include syncopate(42px, white);
+      @include syncopate(42px);
+      color: white;
       letter-spacing: 14px;
       margin-left: 14px;
     }
@@ -570,27 +582,30 @@ h2 {
       //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     }
     p {
-      @include roboto(42px, black);
+      @include roboto(42px);
+      color: black;
     }
     img {
       width: 100%;
     }
     .section-title {
       display: none;
-      @include roboto(72px, white);
+      @include roboto(72px);
+      color: white;
       background-color: $primary-color;
       padding: 10px 10px 10px 10px;
       margin: 180px 0px 30px 0px;
       border-radius: 30px;
       p {
-        @include roboto(32px, white);
+        @include roboto(32px);
+        color: white;
         max-width: 700px;
         margin: 10px auto 10px auto;
       }
     }
     h3 {
       margin: 0;
-      @include roboto(50px, #aaa);
+      @include roboto(50px);
     }
     h4 {
 
@@ -664,12 +679,14 @@ h2 {
       margin: auto;
     }
     p {
-      @include roboto(20px, white);
+      @include roboto(20px);
+      color: white;
       max-width: 400px;
       margin: 30px auto auto auto;
     }
     .section-title {
-      @include roboto(72px, white);
+      @include roboto(72px);
+      color: white;
     }
   }
   .contact-grid {
@@ -702,7 +719,8 @@ h2 {
       grid-row: 2;
       h2 {
         text-align: center;
-        @include roboto(30px, white)
+        @include roboto(30px);
+        color: white;
       }
     }
     .content-buttons {
@@ -732,7 +750,8 @@ h2 {
     }
     a {
       text-decoration: none;
-      @include roboto(60px, $primary-color);
+      @include roboto(60px);
+      color: $primary-color;
     }
 
     i {
@@ -748,8 +767,8 @@ h2 {
     &:not(:last-child) {
       margin-right: 56px;
     }
+    @include roboto(36px);
     color: white;
-    @include roboto(36px, white);
     &:hover {
       transition: 0.3s;
       border-bottom: solid 5px white;
