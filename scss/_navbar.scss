@@ -52,6 +52,7 @@
 @media (device-width: 500px), (max-device-width: 667px) {
   .top-navbar {
     display: none;
+    /*
     height: 40px;
     background-color: black !important;
     z-index: 1;
@@ -85,5 +86,6 @@
         top: 0px;
       }
     }
+    */
   }
 }
