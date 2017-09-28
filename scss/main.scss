@@ -577,7 +577,7 @@ h2 {
     width: 600px;
     float: none;
     margin: auto auto 20px auto;
-    font-size: 50px;
+    font-size: 60px;
     padding: 20px;
     border: {
       radius: 60px;
@@ -585,12 +585,11 @@ h2 {
     }
     a {
       text-decoration: none;
-      @include roboto(50px);
+      @include roboto(60px);
       color: $primary-color;
     }
-
     i {
-      font-size: 50px;
+      font-size: 60px;
     }
   }
   .contact-buttons {
