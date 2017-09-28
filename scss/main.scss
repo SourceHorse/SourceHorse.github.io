@@ -456,7 +456,7 @@ h2 {
     grid-template-columns: repeat(1, 1fr);
     -ms-grid-columns: 1;
     //grid-auto-rows: minmax(0px, auto);
-    grid-column-gap: 20px;
+    grid-column-gap: 0px;
     grid-row-gap: 30px;
     &> div {
       height: auto;
@@ -480,7 +480,7 @@ h2 {
       -ms-grid-column: 1;
       grid-row: 2;
       -ms-grid-row: 2;
-      margin: auto 10%;
+      margin: auto;
       border-bottom: solid 1px black;
       height: auto;
     }
