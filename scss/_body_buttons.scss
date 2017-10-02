@@ -13,7 +13,7 @@
     display: block;
     float: left;
     margin-left: 10px;
-}
+  }
 }
 .link-btn {
   @include button($primary-color, 30px, 7px);
@@ -23,23 +23,23 @@
   }
 }
 @media (device-width: 500px), (max-device-width: 667px) {
-.button-row {
-  margin-bottom: auto;
-  width: 600px;
-  text-align: center;
-  margin: auto;
-  a {
-    float: none;
-    margin: auto auto 30px auto;
+  .button-row {
+    margin-bottom: auto;
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    a {
+      float: none;
+      margin: auto auto 30px auto;
+    }
   }
-}
-.link-btn {
-  @include button($primary-color, 60px, 7px);
-  @include roboto(60px);
-  i {
-    font-size: 70px;
+  .link-btn {
+    @include button($primary-color, 60px, 7px);
+    @include roboto(60px);
+    i {
+      font-size: 70px;
+    }
   }
-}
 }
 //contact---------------------------------------
 .contact-buttons {
@@ -176,5 +176,4 @@
       margin: 10px 0px 0px 0px;
     }
   }
-
 }

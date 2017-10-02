@@ -57,35 +57,35 @@
     background-color: black !important;
     z-index: 1;
     * {
-      color: white !important;
-    }
-    .nav-buttons {
-      display: none;
-    }
-    .social {
-      margin: 0;
-      padding: 0px 5px;
-    }
-    .drop-button {
-      display: block;
-      margin: 0;
-    }
-    &.drop-menu {
-      height: 200px;
-      .nav-buttons {
-        display: block;
-        float: none;
-        position: relative;
-        top: 48px;
-      }
-
-      .drop-button {
-        display: block;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-      }
-    }
-    */
+    color: white !important;
   }
+  .nav-buttons {
+  display: none;
+}
+.social {
+margin: 0;
+padding: 0px 5px;
+}
+.drop-button {
+display: block;
+margin: 0;
+}
+&.drop-menu {
+height: 200px;
+.nav-buttons {
+display: block;
+float: none;
+position: relative;
+top: 48px;
+}
+
+.drop-button {
+display: block;
+position: absolute;
+left: 0px;
+top: 0px;
+}
+}
+*/
+}
 }
