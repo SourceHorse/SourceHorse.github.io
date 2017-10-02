@@ -408,10 +408,11 @@ h2 {
       margin: auto;
     }
     p {
-      @include roboto(20px);
+      @include roboto(40px);
       color: white;
-      max-width: 400px;
-      margin: 30px auto auto auto;
+      max-width: none;
+      margin: auto;
+      padding-left: 60px;
     }
     .section-title {
       @include roboto(72px);
@@ -432,13 +433,14 @@ h2 {
       padding-top: 10%;
       grid-column: 1 / 3;
       grid-row: 1;
+      text-align: justify;
     }
     .my-picture {
       grid-column: 3;
       grid-row: 1;
       img {
         height: 300px;
-        border: solid 2px white;
+        border: solid 5px white;
         border-radius: 50%;
       }
     }
@@ -448,7 +450,7 @@ h2 {
       grid-row: 2;
       h2 {
         text-align: center;
-        @include roboto(30px);
+        @include roboto(60px);
         color: white;
       }
     }

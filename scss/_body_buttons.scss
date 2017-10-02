@@ -76,7 +76,32 @@
 }
 
 @media (device-width: 500px), (max-device-width: 667px) {
-
+  .contact-buttons {
+    position: relative;
+    bottom: auto;
+    display: block;
+    float: none;
+    text-align: left;
+    margin-left: 100px;
+    text-decoration: none;
+    &:not(:last-child) {
+      margin-right: 56px;
+    }
+    @include roboto(52px);
+    color: white;
+    &:hover {
+      transition: 0.3s;
+      border-bottom: none;
+      border-left: solid 10px white;
+    }
+    i {
+      font-size: 56px;
+      margin-right: 8px;
+    }
+  }
+  .fcc-icon {
+    font-size: 38px !important;
+  }
 }
 //scroll buttons---------------------------------
 .go-btn {
