@@ -221,11 +221,27 @@ h2 {
 @media (device-width: 500px), (max-device-width: 667px) {
 
   #profile {
-    min-height: 0px;
+    min-height: auto;
     .section-box {
+      max-width: 980px;
+      margin: auto;
     }
     p {
-      @include roboto(30px);
+      @include roboto(40px);
+    }
+    .line1 {
+      @include lobster(100px);
+      color: white;
+    }
+    .line2 {
+      @include josefin(90px);
+      color: $primary-color;
+    }
+    .line3 {
+      @include syncopate(36px);
+      color: white;
+      letter-spacing: 14px;
+      margin-left: 14px;
     }
   }
 
@@ -237,12 +253,13 @@ h2 {
       }
     }
     .g2 {
-      max-width: 500px;
+      max-width: 600px;
     }
   }
 
   #portfolio {
     position: relative;
+    padding-bottom: 120px;
     .section-box {
       height: auto;
       width: 100%;
