@@ -34,7 +34,7 @@
   }
 }
 .link-btn {
-  @include button($primary-color, 30px, 7px);
+  @include button($primary-color, 60px, 7px);
   @include roboto(60px);
   i {
     font-size: 70px;
