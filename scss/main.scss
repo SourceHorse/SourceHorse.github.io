@@ -51,28 +51,11 @@ h2 {
     margin-bottom: 20px;
   }
 }
+.circled {
+  @include in-a-circle($display: block, $margin: 5px, $float: left, $color: $primary-color, $size: 60px, $bg-color: none);
+}
 .language-circle {
-  text-align: center;
-  div {
-    margin: 5px 10px;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: {
-      style: solid;
-      width: 2px;
-      color: white;
-      radius: 50%;
-    }
-    p {
-      @include roboto(20px)
-      text-align: center;
-      padding-top: 20px;
-      color: white;
-    }
-    //#dee64d #af7abd
-  }
+  @include in-a-circle($size: 100px);
 }
 .dev-skills {
   text-align: center;
@@ -121,10 +104,6 @@ h2 {
     padding: 100px 90px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   }
-  p {
-    @include roboto(18px);
-    color: black;
-  }
   img {
     width: 100%;
   }
@@ -171,6 +150,13 @@ h2 {
     -ms-grid-row: 2;
     height: 10px;
   }
+}
+.explanation {
+  text-align: left;
+  clear: both;
+  display: block;
+  @include roboto(20px);
+  margin: 20px 0px 0px 0px;
 }
 .divider {
   height: 10px;
@@ -254,9 +240,6 @@ h2 {
       max-width: 980px;
       margin: auto;
     }
-    p {
-      @include roboto(40px);
-    }
     .line1 {
       @include lobster(100px);
       color: white;
@@ -275,33 +258,15 @@ h2 {
   }
 
   .language-circle {
-    text-align: center;
-    div {
-      margin: 5px 10px;
-      display: inline-block;
-      width: 200px;
-      height: 200px;
-      background-color: rgba(255, 255, 255, 0.2);
-      border: {
-        style: solid;
-        width: 5px;
-        color: white;
-        radius: 50%;
-      }
-      p {
-        @include roboto(20px)
-        text-align: center;
-        padding-top: 30px;
-        color: white;
-      }
-      //#dee64d #af7abd
-    }
+@include in-a-circle($size: 180px);
+p {
+}
   }
   .dev-skills {
     margin-top: 40px;
     text-align: center;
     p {
-      @include roboto(20px);
+      @include roboto(40px);
       color: white;
       margin: 10px 10px 30px 10px;
       display: block;
@@ -332,11 +297,6 @@ h2 {
       margin: auto;
       padding: 100px 0px;
       box-shadow: none;
-      p {
-        @include roboto(18px);
-        color: black;
-        text-align: center;
-      }
       img {
         width: 100%;
       }
@@ -396,7 +356,16 @@ h2 {
       repeat: no-repeat;
     }
   }
-
+  .circled {
+    @include in-a-circle($margin: 0px 5px, $bord-width: 5px, $display: inline-block, $float: none, $color: $primary-color, $size: 120px, $bg-color: none);
+  }
+  .explanation {
+    text-align: center;
+    clear: both;
+    display: block;
+    @include roboto(20px);
+    margin: 20px 0px 0px 0px;
+  }
 
   #contact {
     position: relative;
