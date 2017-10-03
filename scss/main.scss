@@ -52,9 +52,6 @@ h2 {
     margin-bottom: 20px;
   }
 }
-.circled {
-  @include in-a-circle($display: block, $margin: 5px, $float: left, $color: $primary-color, $size: 60px, $bg-color: none);
-}
 .language-circle {
   @include in-a-circle($size: 100px);
 }
@@ -92,8 +89,6 @@ h2 {
     text-align: justify;
   }
 }
-
-
 #portfolio {
   position: relative;
   width: 100%;
@@ -113,12 +108,7 @@ h2 {
     @include roboto(40px);
     color: $primary-color;
   }
-  h4 {
-    @include roboto(20px);
-    color: black;
-  }
 }
-
 .portf-grid {
   height: auto;
   margin-bottom: 40px;
@@ -152,13 +142,6 @@ h2 {
     height: 10px;
   }
 }
-.explanation {
-  text-align: left;
-  clear: both;
-  display: block;
-  @include roboto(20px);
-  margin: 20px 0px 0px 0px;
-}
 .divider {
   height: 10px;
   opacity: 0.2;
@@ -168,8 +151,16 @@ h2 {
     repeat: no-repeat;
   }
 }
-
-
+.circled {
+  @include in-a-circle($display: block, $margin: 5px, $float: left, $color: $primary-color, $size: 60px, $bg-color: none);
+}
+.explanation {
+  text-align: left;
+  clear: both;
+  display: block;
+  @include roboto(20px);
+  margin: 20px 0px 0px 0px;
+}
 #contact {
   position: relative;
   height: 100vh;
@@ -234,7 +225,9 @@ h2 {
 }
 
 @media (device-width: 500px), (max-device-width: 667px) {
-
+  body {
+    min-width: 0;
+  }
   #profile {
     min-height: 1520px;
     .section-box {
@@ -257,82 +250,39 @@ h2 {
       margin-bottom: 100px;
     }
   }
-
   .language-circle {
-@include in-a-circle($size: 180px);
-p {
-}
+    @include in-a-circle($size: 180px);
   }
   .dev-skills {
     margin-top: 40px;
-    text-align: center;
     p {
       @include roboto(40px);
-      color: white;
       margin: 10px 10px 30px 10px;
       display: block;
-      text-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
     }
   }
-
   .profile-grid {
-    grid-auto-rows: minmax(90px, auto);
-    .g1 {
-      padding: {
-        top: 10%;
-      }
-    }
     .g2 {
       max-width: none;
     }
   }
-
-
   #portfolio {
-    position: relative;
     padding-bottom: 120px;
     .section-box {
-      height: auto;
       width: 100%;
       max-width: 100vw;
-      margin: auto;
       padding: 100px 0px;
       box-shadow: none;
-      img {
-        width: 100%;
-      }
-      h3 {
-        @include roboto(40px);
-        color: $primary-color;
-        text-align: center;
-      }
-      h4 {
-        @include roboto(20px);
-        color: black;
-        text-align: center;
-      }
+    }
+    h3 {
+      @include roboto(40px);
+      text-align: center;
     }
   }
-
   .portf-grid {
-    height: auto;
-    margin-bottom: 40px;
-    display: grid;
-    display: -ms-grid;
     grid-template-columns: repeat(1, 1fr);
     -ms-grid-columns: 1;
-    grid-auto-rows: minmax(0px, auto);
     grid-column-gap: 0px;
-    grid-row-gap: 30px;
-    &> div {
-      overflow: hidden;
-    }
-    .port-img {
-      grid-column: 1;
-      -ms-grid-column: 1;
-      grid-row: 1;
-      -ms-grid-row: 1;
-    }
     .port-img-details {
       padding: 0px 40px;
       grid-column: 1;
@@ -345,16 +295,12 @@ p {
       -ms-grid-column: 1;
       grid-row: 3;
       -ms-grid-row: 3;
-      height: 10px;
     }
   }
   .divider {
-    height: 10px;
-    opacity: 0.2;
     border-top: solid 1px black;
     background: {
-      image: url('https://image.ibb.co/gB4J65/bottomshadow.png');
-      repeat: no-repeat;
+      image: none;
     }
   }
   .circled {
@@ -362,21 +308,10 @@ p {
   }
   .explanation {
     text-align: center;
-    clear: both;
-    display: block;
     @include roboto(20px);
     margin: 20px 0px 0px 0px;
   }
-
   #contact {
-    position: relative;
-    height: 100vh;
-    min-height: 600px;
-    background-color: $primary-color;
-    .section-box {
-      max-width: 980px;
-      margin: auto;
-    }
     p {
       @include roboto(40px);
       color: white;
@@ -390,46 +325,18 @@ p {
     }
   }
   .contact-grid {
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 0px;
-    grid-row-gap: 0px;
-    &> div {
-      //  border: 2px solid rgb(233,171,88);
-    }
     .section-title {
-      padding-top: 10%;
-      grid-column: 1 / 3;
-      grid-row: 1;
       text-align: justify;
     }
     .my-picture {
-      grid-column: 3;
-      grid-row: 1;
       img {
-        height: 300px;
         border: solid 5px white;
-        border-radius: 50%;
       }
     }
     .content {
-      padding-top: 10%;
-      grid-column: 1 / 4;
-      grid-row: 2;
       h2 {
-        text-align: center;
         @include roboto(60px);
-        color: white;
       }
-    }
-    .content-buttons {
-      position: relative;
-      bottom: 40px;
-      padding-top: 10%;
-      grid-column: 1 / 4;
-      grid-row: 3;
     }
   }
 }
