@@ -4,6 +4,7 @@
 @import 'navbar';
 @import 'body_buttons';
 body {
+  min-width: 980px;
   margin: 0;
   background-color: white;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
