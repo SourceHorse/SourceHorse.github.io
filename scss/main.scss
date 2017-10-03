@@ -235,7 +235,7 @@ h2 {
 @media (device-width: 500px), (max-device-width: 667px) {
 
   #profile {
-    min-height: auto;
+    min-height: 1520px;
     .section-box {
       max-width: 980px;
       margin: auto;
@@ -357,7 +357,7 @@ p {
     }
   }
   .circled {
-    @include in-a-circle($margin: 0px 5px, $bord-width: 5px, $display: inline-block, $float: none, $color: $primary-color, $size: 120px, $bg-color: none);
+    @include in-a-circle($margin: 0px 3px, $bord-width: 5px, $display: inline-block, $float: none, $color: $primary-color, $size: 120px, $bg-color: none);
   }
   .explanation {
     text-align: center;
