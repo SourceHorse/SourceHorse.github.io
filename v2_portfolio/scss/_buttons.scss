@@ -1,0 +1,60 @@
+// !compileOnSave
+// compileOnSave: false
+.body-button {
+  background-color: $dark-color;
+  color: #aaa;
+  border: solid 1px #333;
+  padding: 3px 18px;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: 0;
+  i {
+    margin-right: 5px;
+  }
+  &:hover {
+    color: white;
+  }
+}
+.link-btn {
+  display: block;
+  float: right;
+  height: 40px;
+  width: 40px;
+  padding-top: 4px;
+  margin-right: 10px;
+  text-align: center;
+  background-color: white;
+  border: {
+    style: solid;
+    width: 2px;
+    radius: 50%;
+  }
+  color: $dark-color;
+  &:hover {
+    transition: 0.3s;
+    color: white;
+    background-color: $dark-color;
+    border: {
+      color: $dark-color;
+    }
+  }
+}
+.contact-buttons {
+  padding: 0px 10px;
+  margin: 0px 3px 0px 0px;
+  a {
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 18px;
+    color: $primary-color;
+    background-color: $dark-color;
+    &:hover {
+      background-color: white;
+      color: $dark-color;
+    }
+  }
+  i {
+    padding: 0px 10px 0px 0px;
+  }
+}
