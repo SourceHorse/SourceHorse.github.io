@@ -172,8 +172,6 @@ p {
 }
 
 #profile {
-  padding-top: 1px;
-  margin-top: -1px;
   overflow: hidden;
   height: 100vh;
   min-height: 700px;
