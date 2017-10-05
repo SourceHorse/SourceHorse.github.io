@@ -2,55 +2,50 @@
 // compileOnSave: false
 .fixed {
   position: fixed;
+  width: 100%;
 }
-#navbar {
-  background-color: rgba(0, 0, 0, 0.0);
+.navbar {
   z-index: 1;
 }
-.top-navbar {
-  height: 60px;
-  width: 100%;
-  a {
-    text-decoration: none;
+.navbar-inverse {
+  border-radius: 0px;
+  .navbar-brand {
+    color: $secondary-color;
   }
-  .nav-buttons {
+}
+@media (max-device-width: 500px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
     display: block;
-    float: left;
-    margin: 5px;
   }
-  .social {
-    display: block;
-    float: right;
-    font-size: 12px;
-    width: 22px;
-    margin: 5px;
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
   }
-  .drop-button {
-    display: none;
-    float: left;
-    margin: 10px 10px 5px 10px;
-    padding: 0px 6px;
-    font-size: 40px;
-    color: white;
-    @include hover-effect;
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
   }
-}
-.nav-over-profile {
-  @include roboto(18px);
-  @include button(white);
-  &.social {
-    @include button(white, 10px, 3px 5px);
+  .navbar-collapse.collapse {
+    display: none!important;
   }
-}
-.nav-over-portfolio {
-  @include roboto(18px);
-  @include button($primary-color);
-  &.social {
-    @include button($primary-color, 10px, 3px 5px);
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
   }
-}
-@media (device-width: 500px), (max-device-width: 667px), (max-width: 980px) {
-  .top-navbar {
-    display: none;
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
   }
 }

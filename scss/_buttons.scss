@@ -61,16 +61,14 @@
     padding: 0px 10px 0px 0px;
   }
 }
-@media (max-width: 780px) {
+@media (max-width: 980px) {
   .body-button {
-    padding: 3px 12px;
-    width: 160px;
+    padding: 3px 0px;
+    margin: 0px 5px;
+    width: 150px;
   }
   .link-btn {
     margin: 20px 10px 0px 0px;
-    &:before {
-      content: '\A\A';
-    }
   }
   .contact-buttons {
     margin: 5px 3px 0px 0px;

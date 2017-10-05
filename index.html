@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html >
 <head>
+  <meta id="meta" name="viewport"
+  content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8">
   <title>Ross Scarborough</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Anton|Josefin+Sans|Lobster|Open+Sans|Open+Sans+Condensed:300|Roboto|Roboto+Condensed|Syncopate" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Jura|Roboto|Roboto+Condensed" rel="stylesheet">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 
   <link rel="stylesheet" href="css/style.css">
@@ -14,318 +16,223 @@
 </head>
 
 <body>
-  <div id = "navbar" class = "top-navbar fixed">
-    <a href="https://www.facebook.com/DRossScarborough" class = "social nav-over-profile"><i onclick="upMenu()" class="fa fa-facebook fa-2x"></i></a>
-    <a href="https://github.com/SourceHorse" class = "social nav-over-profile"><i onclick="upMenu()" class="fa fa-github fa-2x"></i></a>
-    <a href="https://www.linkedin.com/in/ross-scarborough-803162144/" class = "social nav-over-profile"><i onclick="upMenu()" class="fa fa-linkedin fa-2x"></i></a>
-    <a href = "#profile" class = "nav-buttons nav-over-profile">Profile</a>
-    <a href = "#portfolio" class = "nav-buttons nav-over-profile">Portfolio</a>
-    <a href = "#contact" class = "nav-buttons nav-over-profile">Contact</a>
-    <i class="fa fa-bars drop-button nav-over-profile" onClick = "dropMenu()"></i>
-  </div>
-  <div id = "profile">
-    <div class = "section-box">
-      <div class = "profile-grid">
-        <div class = "g1">
-          <h1 class = "line1">Hello. My name is</h1>
-          <h1 class = "line2">Ross Scarborough</h1>
-          <h1 class = "line3">and I love to code</h1>
-        </div>
-        <div class = "g2">
-
-          <div class = "language-circle">
-            <div>
-              <p>HTML5</p>
-            </div>
-            <div>
-              <p>CSS3</p>
-            </div>
-            <div>
-              <p>Sass</p>
-            </div>
-            <div>
-              <p>Bootstrap</p>
-            </div>
-          </div>
-          <div class = "language-circle">
-            <div>
-              <p>JavaScript</p>
-            </div>
-            <div>
-              <p>jQuery</p>
-            </div>
-            <div>
-              <p>Git</p>
-            </div>
-          </div>
-          <div class = "dev-skills">
-            <p>API/AJAX/JSON</p>
-            <p>Responsive Design</p>
-            <p>Intuitive UI</p>
-            <p>Photoshop</p>
-          </div>
-          <!--
-          <p>I started learning to code in June of 2017. I have received guidance from many close friends in the industry and supplemented my learning with sites like FreeCodeCamp and Codecademy.</p>
-          <p>I have learned very quickly and I continue to expand on my knowledge due to a constant drive to know more. My current coding skills include HTML, CSS, Bootstrap, SASS/SCSS, Vanilla JavaScript, and jQuery. I am also familiar with Git/Github, APIs/AJAX, responsive design, and intuitive interfaces.</p>
-        -->
+  <nav class="navbar fixed navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand go-btn" data-scroll-target = "#profile">Ross Scarborough</a>
       </div>
-
-
-
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li id = "nav-prof"><a class = "go-btn" data-scroll-target = "#profile">Profile</a></li>
+          <li id = "nav-port"><a class = "go-btn" data-scroll-target = "#portfolio">Portfolio</a></li>
+          <li id = "nav-cont"><a class = "go-btn" data-scroll-target = "#contact">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://www.facebook.com/DRossScarborough"><i class = "fa fa-facebook"></i></a></li>
+          <li><a href="https://github.com/SourceHorse"><i class = "fa fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/ross-scarborough-803162144/"><i class = "fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
     </div>
-    <div class = "go-btn go-down go-btn-on-black" data-scroll-target = "#portfolio">
-      <h2>Portfolio</h2>
-      <i class = "fa fa-caret-down" aria-hidden="true"></i>
+  </nav>
+  <div id = "profile">
+    <div class = "profile-box">
+      <h1 class = "title">Ross Scarborough</h1>
+      <h1 class = "subtitle">Web Developer</h1>
+      <p class = "introduction">I started learning to code in June of 2017 after returning to the US from South Korea. I have received guidance from many close friends in the industry and supplemented my learning with sites like freeCodeCamp and Codecademy. </p>
+      <a class = "body-button go-btn" data-scroll-target = "#portfolio"><i class = "fa fa-angle-down"></i>View Portfolio</a>
+      <a class = "body-button go-btn" data-scroll-target = "#contact"><i class = "fa fa-angle-double-down"></i>Contact Me</a>
     </div>
   </div>
-</div>
 
-<div id = "portfolio">
-  <div class = "section-box">
-    <br>
-    <br>
-    <div class = "go-btn go-up go-btn-on-white" data-scroll-target = "#profile">
-      <i class = "fa fa-caret-up" aria-hidden="true"></i>
-      <h2>Profile</h2>
-    </div>
-    <div class = "inner-section">
+  <div id = "portfolio">
+    <div class = "portfolio-box">
+      <div class = "portfolio-top">
+        <h2>Portfolio</h2>
+        <p>My current languages and frameworks include HTML5, CSS3, Sass, Bootstrap, JavaScript, and jQuery. This portfolio page was constructed from the ground up with HTML5, CSS, Sass, Bootstrap, and jQuery. </p>
+        <p>I am experienced in using Git and Github for version control. I enjoy using CodePen for quick projects and Atom for finer details. I am also very skilled with Adobe Photoshop and Illustrator, as well as GIMP 2.8. My passion for coding has seen me improve exponentially over the past months and I am hungry for more. Please enjoy some of the projects that helped get me to where I am now.</p>
+      </div>
+      <br>
+      <br>
       <div class = "portf-grid">
         <div class = "port-img">
           <img src = "https://image.ibb.co/fv8pG5/Tablet_Twitch.png">
         </div>
         <div class = "port-img-details">
           <h3 class = "header">Twitch Viewer</h3>
-          <div class = "circled">
-            <div>
-              <p>HTML5</p>
-            </div>
-            <div>
-              <p>CSS3</p>
-            </div>
-            <div>
-              <p>Bootstrap</p>
-            </div>
-            <div>
-              <p>JavaScript</p>
-            </div>
-          </div>
           <p class = "explanation">This responsive web app utilizes the twitch.tv API to fetch information on popular streamers. </p>
+          <ul class = "oval-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Bootstrap</li>
+            <li>JavaScript</li>
+          </ul>
           <br>
-          <div class = "button-row">
-            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/xLMjjE/">
-              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-              View on Codepen
-            </a>
-            <a class = "link-btn" href = "https://github.com/SourceHorse/twitchviewer">
-              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-              Github Repository
-            </a>
-          </div>
+          <br>
+
+          <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/xLMjjE/">
+            <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
+          </a>
+
+          <a class = "link-btn" href = "https://github.com/SourceHorse/twitchviewer">
+            <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
+          </a>
+
         </div>
         <div class = "divider">
         </div>
       </div>
+
       <div class = "portf-grid">
         <div class = "port-img">
           <img src = "https://image.ibb.co/kxk3b5/Tablet_Wiki.png">
         </div>
         <div class = "port-img-details">
           <h3>Wikipedia Search</h3>
-          <div class = "circled">
-            <div>
-              <p>HTML5</p>
-            </div>
-            <div>
-              <p>CSS3</p>
-            </div>
-            <div>
-              <p>Bootstrap</p>
-            </div>
-            <div>
-              <p>JavaScript</p>
-            </div>
-            <div>
-              <p>jQuery</p>
-            </div>
-            <div>
-              <p>jQueryUI</p>
-            </div>
-          </div>
+
           <p class = "explanation">This app uses the MediaWiki API to return search results from queries entered into the form. It also has a responsive design.</p>
+          <ul class = "oval-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Bootstrap</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+          </ul>
           <br>
-          <div class = "button-row">
-            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/NvMmBy/">
-              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-              View on Codepen
-            </a>
+          <br>
+
+          <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/NvMmBy/">
+            <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i></a>
             <a class = "link-btn" href = "https://github.com/SourceHorse/wikisearch">
-              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-              Github Repository
-            </a>
-          </div>
-        </div>
-        <div class = "divider">
-        </div>
-      </div>
+              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i></a>
 
-      <div class = "portf-grid">
-        <div class = "port-img">
-          <img src = "https://image.ibb.co/mTo0Ok/Tablet_Weather.png">
-        </div>
-        <div class = "port-img-details">
-          <h3>Local Weather</h3>
-          <div class = "circled">
-            <div>
-              <p>HTML5</p>
             </div>
-            <div>
-              <p>CSS3</p>
-            </div>
-            <div>
-              <p>Bootstrap</p>
-            </div>
-            <div>
-              <p>jQuery</p>
-            </div>
-            <div>
-              <p>jQueryUI</p>
+            <div class = "divider">
             </div>
           </div>
 
-          <p class = "explanation">This app uses a FreeCodeCamp weather API to find weather conditions in the user's area based on the device's coordinates.</p>
-          <br>
-          <div class = "button-row">
-            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/yoMJGP/">
-              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-              View on Codepen
-            </a>
-            <a class = "link-btn" href = "https://github.com/SourceHorse/weatherapp">
-              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-              Github Repository
-            </a>
-          </div>
-        </div>
-        <div class = "divider">
-        </div>
-      </div>
+          <div class = "portf-grid">
+            <div class = "port-img">
+              <img src = "https://image.ibb.co/mTo0Ok/Tablet_Weather.png">
+            </div>
+            <div class = "port-img-details">
+              <h3>Local Weather</h3>
 
 
-      <div class = "portf-grid">
-        <div class = "port-img">
-          <img src = "https://image.ibb.co/bPPJ9Q/Tablet_Quote.png">
-        </div>
-        <div class = "port-img-details">
-          <h3>Quote Generator</h3>
-          <div class = "circled">
-            <div>
-              <p>HTML5</p>
-            </div>
-            <div>
-              <p>CSS3</p>
-            </div>
-            <div>
-              <p>Bootstrap</p>
-            </div>
-            <div>
-              <p>jQuery</p>
-            </div>
-            <div>
-              <p>jQueryUI</p>
-            </div>
-          </div>
-          <p class = "explanation">This app uses the Quotes on Design API to fetch a new random quote and JavaScript arrays to change the font and color of UI elements. </p>
-          <br>
-          <div class = "button-row">
-            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/yoyjgj/">
-              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-              View on Codepen
-            </a>
-            <a class = "link-btn" href = "https://github.com/SourceHorse/quotegen">
-              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-              Github Repository
-            </a>
-          </div>
-        </div>
-        <div class = "divider">
-        </div>
-      </div>
+              <p class = "explanation">This app uses a FreeCodeCamp weather API to find weather conditions in the user's area based on the device's coordinates.</p>
+              <ul class = "oval-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Bootstrap</li>
+                <li>jQuery</li>
+              </ul>
+              <br>
+              <br>
+              <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/yoMJGP/">
+                <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i></a>
+                <a class = "link-btn" href = "https://github.com/SourceHorse/weatherapp">
+                  <i class = "fa fa-github fa-2x" aria-hidden = "true"></i></a>
+                </div>
+                <div class = "divider">
+                </div>
+              </div>
 
-      <div class = "portf-grid">
-        <div class = "port-img">
-          <img src = "https://image.ibb.co/c4kQpQ/Tablet_Tribute.png">
-        </div>
-        <div class = "port-img-details">
-          <h3>Carl Sagan Tribute Page</h3>
-          <div class = "circled">
-            <div>
-              <p>HTML5</p>
-            </div>
-            <div>
-              <p>CSS3</p>
-            </div>
-            <div>
-              <p>Bootstrap</p>
-            </div>
-          </div>
-          <p class = "explanation">The first web page I ever made. This is a small tribute to one of the most influential people in modern astronomy and science education.</p>
-          <br>
-          <div class = "button-row">
-            <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/mwoGmN/">
-              <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i>
-              View on Codepen
-            </a>
-            <a class = "link-btn" href = "https://github.com/SourceHorse/TributePageSagan">
-              <i class = "fa fa-github fa-2x" aria-hidden = "true"></i>
-              Github Repository
-            </a>
-          </div>
-        </div>
-        <div class = "divider">
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <div class = "go-btn go-down go-btn-on-white" data-scroll-target = "#contact">
-      <h2>Contact</h2>
-      <i class = "fa fa-caret-down" aria-hidden="true"></i>
-    </div>
-  </div>
-</div>
 
-<div id = "contact">
-  <div class = "section-box">
-    <br>
-    <br>
-    <div class = "go-btn go-up go-btn-on-black" data-scroll-target = "#portfolio">
-      <i class = "fa fa-caret-up" aria-hidden="true"></i>
-      <h2>Portfolio</h2>
-    </div>
-    <div class = "contact-grid">
-      <div class = "section-title">
-        <h1>Contact</h1>
-        <p>I am currently available for employment and am eager to join a team and continue to grow as a developer while further advancing my skills.</p>
-      </div>
-      <div class = "my-picture">
-        <img src = "https://image.ibb.co/gN4qoQ/Meinkorea.jpg">
-      </div>
-      <div class = "content">
-    <h2>rossscarborough@gmail.com</h2>
-  </div>
-  <div class = "content-buttons">
+              <div class = "portf-grid">
+                <div class = "port-img">
+                  <img src = "https://image.ibb.co/bPPJ9Q/Tablet_Quote.png">
+                </div>
+                <div class = "port-img-details">
+                  <h3>Quote Generator</h3>
 
-    <a class = "contact-buttons" href="https://www.linkedin.com/in/ross-scarborough-803162144/"><i onclick="upMenu()" class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>LinkedIn</a>
-    <a class = "contact-buttons" href="https://www.facebook.com/DRossScarborough"><i onclick="upMenu()" class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>Facebook</a>
-    <a class = "contact-buttons" href="https://github.com/SourceHorse"><i onclick="upMenu()" class="fa fa-github-square fa-2x" aria-hidden="true"></i>Github</a>
-    <a class = "contact-buttons" href="https://www.freecodecamp.org/sourcehorse"><i class="fa fa-free-code-camp fcc-icon" aria-hidden="true"></i>freeCodeCamp</a>
-  </div>
-</div>
-</div>
-</div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
 
-<script  src="js/index.js"></script>
+                  <p class = "explanation">This app uses the Quotes on Design API to fetch a new random quote and JavaScript arrays to change the font and color of UI elements. </p>
+                  <ul class = "oval-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Bootstrap</li>
+                    <li>jQuery</li>
+                  </ul>
+                  <br>
+                  <br>
 
-</body>
-</html>
+                  <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/yoyjgj/">
+                    <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i></a>
+                    <a class = "link-btn" href = "https://github.com/SourceHorse/quotegen">
+                      <i class = "fa fa-github fa-2x" aria-hidden = "true"></i></a>
+
+                    </div>
+                    <div class = "divider">
+                    </div>
+                  </div>
+
+                  <div class = "portf-grid">
+                    <div class = "port-img">
+                      <img src = "https://image.ibb.co/c4kQpQ/Tablet_Tribute.png">
+                    </div>
+                    <div class = "port-img-details">
+                      <h3>Carl Sagan Tribute Page</h3>
+
+
+                      <p class = "explanation">The first web page I ever made. This is a small tribute to one of the most influential people in modern astronomy and science education.</p>
+                      <ul class = "oval-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Bootstrap</li>
+                      </ul>
+                      <br>
+                      <br>
+
+                      <a class = "link-btn" href = "https://codepen.io/SourceHorse/full/mwoGmN/">
+                        <i class = "fa fa-codepen fa-2x" aria-hidden = "true"></i></a>
+                        <a class = "link-btn" href = "https://github.com/SourceHorse/TributePageSagan">
+                          <i class = "fa fa-github fa-2x" aria-hidden = "true"></i></a>
+
+                        </div>
+                        <div class = "divider">
+                        </div>
+                      </div>
+                      <br>
+                      <br>
+                    </div>
+                  </div>
+
+
+                  <div id = "contact">
+                    <div class = "contact-box">
+                      <br>
+                      <br>
+                      <div class = "contact-grid">
+                        <div class = "contact-top">
+                          <h2>Contact</h2>
+                          <p>I am currently available for employment and am eager to join a team and continue to grow as a developer. I'm looking for a challenging and rewarding position in the Raleigh-Durham area. Please contact me for my resume or if you have any questions about my skills or experience.</p>
+
+                        </div>
+                        <div class = "my-picture">
+                          <img src = "https://image.ibb.co/gN4qoQ/Meinkorea.jpg">
+                        </div>
+                        <div class = "contact-methods">
+                          <h3>rossscarborough@gmail.com</h3>
+                          <br>
+                          <div class = "contact-buttons">
+                            <a class = "contact-buttons" href="https://www.linkedin.com/in/ross-scarborough-803162144/"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+                            <a class = "contact-buttons" href="https://www.facebook.com/DRossScarborough"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
+                            <a class = "contact-buttons" href="https://github.com/SourceHorse"><i class="fa fa-github" aria-hidden="true"></i>Github</a>
+                            <a class = "contact-buttons" href="https://www.freecodecamp.org/sourcehorse"><i class="fa fa-free-code-camp" aria-hidden="true"></i>freeCodeCamp</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+                  <script  src="js/index.js"></script>
+
+                </body>
+                </html>
