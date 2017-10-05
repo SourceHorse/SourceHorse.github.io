@@ -13,7 +13,7 @@
     color: $secondary-color;
   }
 }
-@media (max-width: 1000px) {
+@media (max-device-width: 500px) {
     .navbar-header {
         float: none;
     }

@@ -73,9 +73,6 @@ p {
     color: white;
     text-shadow: 0px 0px 40px black, 0px 0px 30px black, 0px 0px 20px black;
   }
-  a {
-    margin: 0px 10px;
-  }
 }
 
 
@@ -256,7 +253,17 @@ p {
     display: block;
     margin: 20px 0px 20px 0px;
   }
-
+  .oval-list {
+    li {
+      margin: 3px 3px 0px 0px;
+    }
+  }
+  .contact-grid {
+    padding: 50px 20px 0px 20px;
+    .my-picture {
+      padding: 20px 0px 0px 0px;
+    }
+  }
 }
 @media (max-width: 780px) {
   h2 {
@@ -294,7 +301,7 @@ p {
       border: solid 3px $secondary-color;
       background-color: rgba(0, 0, 0, 0.1);
       padding: 0px 20px 5px 20px;
-      font-size: 40px;
+      font-size: 30px;
     }
     .subtitle {
       color: $light-color;
@@ -302,9 +309,6 @@ p {
     .introduction {
       color: white;
       text-shadow: 0px 0px 40px black, 0px 0px 30px black, 0px 0px 20px black;
-    }
-    a {
-      margin: 0px 10px;
     }
   }
 }
