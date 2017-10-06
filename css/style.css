@@ -452,6 +452,11 @@ p {
     color: white;
     text-shadow: 0px 0px 40px black, 0px 0px 30px black, 0px 0px 20px black;
   }
+  #contact {
+    position: relative;
+    height: 100vh;
+    min-height: 540px;
+  }
   .contact-grid {
     padding: 50px 20px 0px 20px;
   }
