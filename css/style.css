@@ -418,11 +418,9 @@ p {
     font-size: 16px;
   }
   #profile {
-    padding-top: 1px;
-    margin-top: -1px;
     overflow: hidden;
     height: 100vh;
-    min-height: 700px;
+    min-height: 340px;
     width: 100%;
     background-image: url(https://image.ibb.co/kME7vb/gscl_portf_bg1080.jpg);
     background-repeat: no-repeat;
