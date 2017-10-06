@@ -359,7 +359,7 @@ p {
   -ms-grid-row: 2;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .portf-grid {
     padding: 0px 90px;
     height: auto;
@@ -409,7 +409,7 @@ p {
   }
 }
 
-@media (max-width: 1000px) and (max-width: 780px) {
+@media (max-width: 700px) and (max-width: 780px) {
   h2 {
     font-size: 50px;
     color: white;
