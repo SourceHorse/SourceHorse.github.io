@@ -446,7 +446,8 @@ p {
   }
   .profile-box .subtitle {
     color: #e3e3e3;
-    font-size: 30px;
+    font-size: 24px;
+    margin: 0;
   }
   .profile-box .introduction {
     color: white;
