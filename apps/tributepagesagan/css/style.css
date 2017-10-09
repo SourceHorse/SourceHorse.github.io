@@ -1,0 +1,58 @@
+.small-headers {
+  font-size: 20pt;
+  color: #000;
+}
+body {
+  background-color: #111;
+  font-family: calibri;
+}
+#back {
+  background-color: #ddd;
+}
+#main-container {
+}
+#main {
+  margin-top: 20px;
+}
+#topBG {
+  background-image: url("https://image.ibb.co/jpA7Xv/Hubble_Deep_Field_III_1024x1024.jpg");
+}
+#top-sagan {
+border-color: #FFFFFF;
+border-width: 10px;
+border-style: solid;
+border-radius: 50%;
+}
+.title {
+  font-family: "calibri light";
+  font-size: 48pt;
+  color: #fff;
+}
+.subtitle {
+  font-size: 20pt;
+  color: #fff;
+}
+.list-text {
+  font-size: 13pt;
+}
+.list-header {
+  font-size: 30pt;
+  color
+}
+@media screen and (max-width: 600px) {
+  #top-sagan {
+border-color: #FFFFFF;
+border-width: 3px;
+border-style: solid;
+border-radius: 50%;
+}
+  .title {
+  font-family: "calibri light";
+  font-size: 36pt;
+}
+
+}
+.slim {
+  max-width: 517px;
+  margin: auto;
+}
