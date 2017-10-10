@@ -12,7 +12,20 @@
 }
 
 .navbar-inverse .navbar-brand {
+  transition: 0.2s;
   color: #c7d70e;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  transition: 0.2s;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  transition: 0.2s;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  transition: 0.2s;
 }
 
 @media (max-device-width: 500px) {
@@ -53,11 +66,12 @@
 }
 
 .body-button {
+  transition: 0.2s;
   display: inline-block;
   margin: 0px 10px;
   background-color: #4a4a49;
   width: 200px;
-  color: #aaa;
+  color: #e3e3e3;
   border: solid 1px #333;
   padding: 3px 18px;
   font-size: 18px;
@@ -71,10 +85,13 @@
 }
 
 .body-button:hover {
-  color: white;
+  transition: 0.2s;
+  color: #4a4a49;
+  background-color: #e3e3e3;
 }
 
 .link-btn {
+  transition: 0.2s;
   display: block;
   float: right;
   height: 40px;
@@ -90,7 +107,7 @@
 }
 
 .link-btn:hover {
-  transition: 0.3s;
+  transition: 0.2s;
   color: white;
   background-color: #4a4a49;
   border-color: #4a4a49;
@@ -102,6 +119,7 @@
 }
 
 .contact-buttons a {
+  transition: 0.2s;
   display: inline-block;
   border-radius: 30px;
   font-size: 18px;
@@ -110,6 +128,7 @@
 }
 
 .contact-buttons a:hover {
+  transition: 0.2s;
   background-color: white;
   color: #4a4a49;
 }

@@ -7,10 +7,21 @@
 .navbar {
   z-index: 1;
 }
+
 .navbar-inverse {
   border-radius: 0px;
   .navbar-brand {
+    transition: 0.2s;
     color: $secondary-color;
+    &:hover {
+      transition: 0.2s;
+    }
+  }
+  .navbar-nav > li > a {
+    transition: 0.2s;
+    &:hover {
+      transition: 0.2s;
+    }
   }
 }
 @media (max-device-width: 500px) {

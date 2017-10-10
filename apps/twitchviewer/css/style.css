@@ -32,11 +32,11 @@ body {
   margin-top: -10px;
   box-shadow:0 2px 2px #ccc;
   background-color: #fff;
-  
+
 }
 .shell:hover {
   background-color: #eee;
-  
+
 }
 a {
   text-decoration: none !important;
