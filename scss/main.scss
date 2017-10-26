@@ -1,5 +1,6 @@
 // compileExpanded, expandedFilenamePattern: ../css/style.css
-@import 'vars_mixins';
+@import 'variables';
+@import 'mixins';
 @import 'navbar';
 @import 'buttons';
 //DECORATIONS--------------------------
@@ -7,13 +8,9 @@
   padding: 0;
   list-style-type: none;
   li {
-    display: block;
-    float: left;
+    @include pillbutton(white);
     padding: 1px 7px;
-    margin: 0px 3px 0px 0px;
-    background-color: $dark-color;
-    border-radius: 30px;
-    color: white;
+    margin: 3px 3px 0px 0px;
   }
 }
 //INDEX----------------------------------

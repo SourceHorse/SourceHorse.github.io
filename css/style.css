@@ -119,12 +119,12 @@
 }
 
 .contact-buttons a {
-  transition: 0.2s;
   display: inline-block;
-  border-radius: 30px;
-  font-size: 18px;
   color: #91a30e;
   background-color: #4a4a49;
+  border-radius: 30px;
+  transition: 0.2s;
+  font-size: 18px;
 }
 
 .contact-buttons a:hover {
@@ -157,13 +157,12 @@
 }
 
 .oval-list li {
-  display: block;
-  float: left;
-  padding: 1px 7px;
-  margin: 0px 3px 0px 0px;
+  display: inline-block;
+  color: white;
   background-color: #4a4a49;
   border-radius: 30px;
-  color: white;
+  padding: 1px 7px;
+  margin: 3px 3px 0px 0px;
 }
 
 body {

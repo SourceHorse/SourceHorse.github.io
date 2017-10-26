@@ -1,7 +1,7 @@
 // !compileOnSave
 // compileOnSave: false
 .body-button {
-  transition: 0.2s;
+  transition: $transition-time;
   display: inline-block;
   margin: 0px 10px;
   background-color: $dark-color;
@@ -17,13 +17,13 @@
     margin-right: 5px;
   }
   &:hover {
-    transition: 0.2s;
+    transition: $transition-time;
     color: $dark-color;
     background-color: $light-color;
   }
 }
 .link-btn {
-  transition: 0.2s;
+  transition: $transition-time;
   display: block;
   float: right;
   height: 40px;
@@ -39,7 +39,7 @@
   }
   color: $dark-color;
   &:hover {
-    transition: 0.2s;
+    transition: $transition-time;
     color: white;
     background-color: $dark-color;
     border: {
@@ -51,14 +51,11 @@
   padding: 0px 10px;
   margin: 0px 3px 0px 0px;
   a {
-    transition: 0.2s;
-    display: inline-block;
-    border-radius: 30px;
+    @include pillbutton;
+    transition: $transition-time;
     font-size: 18px;
-    color: $primary-color;
-    background-color: $dark-color;
     &:hover {
-      transition: 0.2s;
+      transition: $transition-time;
       background-color: white;
       color: $dark-color;
     }
