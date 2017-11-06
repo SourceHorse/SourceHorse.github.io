@@ -222,6 +222,7 @@ p {
 
 .profile-box .subtitle {
   color: #e3e3e3;
+  text-shadow: 0px 0px 40px black, 0px 0px 30px black, 0px 0px 20px black;
 }
 
 .profile-box .introduction {
