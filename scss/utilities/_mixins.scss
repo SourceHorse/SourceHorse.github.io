@@ -1,0 +1,32 @@
+// !compileOnSave
+// compileOnSave: false
+@mixin pillbutton($color: $primary-color) {
+  display: inline-block;
+  color: $color;
+  background-color: $dark-color;
+  border-radius: 30px;
+};
+
+@mixin shadow {
+  text-shadow: 0px 0px 40px black, 0px 0px 30px black, 0px 0px 20px black;
+}
+
+@mixin display-grid {
+  display: grid;
+  display: -ms-grid;
+}
+
+@mixin template-columns($template: 32% 66%) {
+  grid-template-columns: $template;
+  -ms-grid-columns: $template;
+}
+
+@mixin col($col: 1) {
+  grid-column: $col;
+  -ms-grid-column: $col;
+}
+
+@mixin row($row: 1) {
+  grid-row: $row;
+  -ms-grid-row: $row;
+}

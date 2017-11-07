@@ -1,8 +1,0 @@
-// !compileOnSave
-// compileOnSave: false
-@mixin pillbutton($color: $primary-color) {
-  display: inline-block;
-  color: $color;
-  background-color: $dark-color;
-  border-radius: 30px;
-};

@@ -1,0 +1,38 @@
+// !compileOnSave
+// compileOnSave: false
+.oval-list {
+  padding: 0;
+  list-style-type: none;
+  li {
+    @include pillbutton(white);
+    padding: 1px 7px;
+    margin: 3px 3px 0px 0px;
+  }
+}
+
+.divider {
+  height: 10px;
+  opacity: 0.2;
+  border-top: solid 1px black;
+  background: {
+    image: url('https://image.ibb.co/gB4J65/bottomshadow.png');
+    repeat: no-repeat;
+    position: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .divider {
+    height: 0px;
+    opacity: 0.2;
+    border-top: solid 1px black;
+    background: {
+      image: none;
+    }
+  }
+  .oval-list {
+    li {
+      margin: 3px 3px 0px 0px;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+// !compileOnSave
+// compileOnSave: false
+
+
+//Portfolio-----
+.portf-grid {
+  padding: 0px 90px;
+  height: auto;
+  margin-bottom: 40px;
+  @include display-grid;
+  @include template-columns(32% 66%);
+  grid-auto-rows: minmax(0px, auto);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  &> div {
+    overflow: hidden;
+  }
+  .port-img {
+    @include col(1);
+    @include row(1);
+  }
+  .port-img-details {
+    @include col(2);
+    @include row(1);
+  }
+  .divider {
+    @include col(1 / span 2);
+    @include row(2);
+  }
+}
+
+//Contact-----
+.contact-grid {
+  padding: 50px 90px 0px 90px;
+  overflow: auto;
+  @include display-grid;
+  @include template-columns(66% 34%);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 0px;
+  grid-row-gap: 0px;
+  .contact-top {
+    @include col(1);
+    @include row(1);
+  }
+  .my-picture {
+    padding: 20px 0px 0px 24%;
+    @include col(2);
+    @include row(1);
+  }
+  .contact-methods {
+    text-align: center;
+    @include col(1 / span 2);
+    @include row(2);
+  }
+}
+
+@media (max-width: 800px) {
+  .portf-grid {
+    padding: 0px 90px;
+    height: auto;
+    margin-bottom: 40px;
+    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: 1;
+    grid-auto-rows: minmax(0px, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    &> div {
+      overflow: hidden;
+    }
+    .port-img {
+      grid-column: 1;
+      -ms-grid-column: 1;
+      grid-row: 1;
+      -ms-grid-row: 1;
+    }
+    .port-img-details {
+      grid-column: 1;
+      -ms-grid-column: 1;
+      grid-row: 2;
+      -ms-grid-row: 2;
+    }
+    .divider {
+      grid-column: 1;
+      -ms-grid-column: 1;
+      grid-row: 3;
+      -ms-grid-row: 3;
+      height: 0px;
+    }
+  }
+  .contact-grid {
+    padding: 50px 20px 0px 20px;
+    .my-picture {
+      padding: 20px 0px 0px 0px;
+    }
+  }
+}
+@media (max-width: 620px) {
+  .portf-grid {
+    padding: 0px 20px;
+  }
+}

@@ -11,16 +11,16 @@
 .navbar-inverse {
   border-radius: 0px;
   .navbar-brand {
-    transition: 0.2s;
+    transition: $transition-time;
     color: $secondary-color;
     &:hover {
-      transition: 0.2s;
+      transition: $transition-time;
     }
   }
   .navbar-nav > li > a {
-    transition: 0.2s;
+    transition: $transition-time;
     &:hover {
-      transition: 0.2s;
+      transition: $transition-time;
     }
   }
 }
